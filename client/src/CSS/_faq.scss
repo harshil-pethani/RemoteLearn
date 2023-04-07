@@ -1,0 +1,204 @@
+@import "./variables";
+
+.faqSection {
+  background-color: $mainBg;
+  width: 100%;
+  height: fit-content;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 100px;
+  padding-bottom: 100px;
+  position: relative;
+
+  .title {
+    font-size: 50px;
+  }
+
+  .questionsContainer {
+    // border: 2px solid red;
+    margin-top: 100px;
+    width: 65%;
+    details {
+      border-bottom: 1px solid rgb(104, 104, 104);
+    }
+
+    details summary {
+      width: 100%;
+      padding: 10px;
+      padding-bottom: 0;
+      position: relative;
+      cursor: pointer;
+      font-weight: 300;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      // border: 2px solid red;
+    }
+
+    details .que {
+      width: 90%;
+      position: relative;
+      color: rgb(180, 180, 180);
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: 300;
+      list-style: none;
+      // border: 2px solid red;
+    }
+
+    details .btn {
+      font-size: 50px;
+      color: $orange;
+      padding: 0;
+      transform-origin: center;
+      transition: all 0.5s ease;
+    }
+
+    details .ans {
+      padding: 10px;
+      padding-top: 0;
+      font-size: 20px;
+      width: 90%;
+      text-align: left;
+
+      a {
+        color: white;
+        font-style: italic;
+        padding-left: 10px;
+      }
+    }
+
+    details[open] summary .btn {
+      transform: rotate(45deg);
+    }
+
+    details summary {
+      outline: 0;
+    }
+
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  .faqBgFont {
+    position: absolute;
+    top: 130px;
+    transform: translateX(-50%);
+    left: 50%;
+    img {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .faqSection {
+    background-color: $mainBg;
+    width: 100%;
+    height: fit-content;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    position: relative;
+    // border: 2px solid red;
+
+    .title {
+      font-size: 26px;
+      text-align: center;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 48px;
+        height: 5px;
+        top: -12px;
+        left: 50%;
+        transform: skew(-40deg) translateX(-50%);
+        position: absolute;
+        background-color: $orange;
+      }
+    }
+
+    .questionsContainer {
+      // border: 2px solid red;
+      margin-top: 50px;
+      width: 100%;
+      details {
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgb(104, 104, 104);
+      }
+
+      details summary {
+        width: 100%;
+        padding: 10px;
+        padding-bottom: 0;
+        position: relative;
+        cursor: pointer;
+        font-weight: 300;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // border: 2px solid red;
+      }
+
+      details .que {
+        width: 90%;
+        position: relative;
+        color: rgb(180, 180, 180);
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 300;
+        list-style: none;
+        // border: 2px solid red;
+      }
+
+      details .btn {
+        font-size: 50px;
+        color: $orange;
+        padding: 0;
+        transform-origin: center;
+        transition: all 0.5s ease;
+      }
+
+      details .ans {
+        padding: 10px;
+        padding-top: 5px;
+        font-size: 18px;
+        width: 90%;
+        text-align: left;
+      }
+
+      details[open] summary .btn {
+        transform: rotate(45deg);
+      }
+
+      details summary {
+        outline: 0;
+      }
+
+      details summary::-webkit-details-marker {
+        display: none;
+      }
+    }
+
+    .faqBgFont {
+      position: absolute;
+      top: 75px;
+      transform: translateX(-50%);
+      left: 50%;
+      img {
+        width: auto;
+        height: 40px;
+      }
+    }
+  }
+}

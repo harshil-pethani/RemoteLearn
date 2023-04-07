@@ -1,0 +1,232 @@
+@import "./variables";
+
+.contactForm {
+  background-color: $mainBg;
+  color: white;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  padding: 50px 100px;
+
+  .left {
+    width: 50%;
+
+    .title {
+      font-size: 50px;
+      width: 70%;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+    .desc {
+      font-weight: 0;
+      width: 80%;
+      margin-bottom: 70px;
+      font-weight: 300;
+    }
+
+    .detail {
+      margin-top: 20px;
+      font-weight: 300;
+      font-size: 20px;
+    }
+  }
+  .right {
+    width: 50%;
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .formField {
+        display: flex;
+        margin-bottom: 30px;
+        gap: 10px;
+
+        .subformField {
+          width: 50%;
+
+          .labelSpan {
+            font-size: 14px;
+          }
+        }
+      }
+      input,
+      textarea {
+        width: 100%;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 18px;
+        outline: none;
+        overflow: hidden;
+        background-color: $drop;
+        overflow: hidden !important;
+        color: white;
+      }
+
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px $drop inset !important;
+      }
+
+      input:-webkit-autofill {
+        -webkit-text-fill-color: white !important;
+      }
+
+      textarea {
+        resize: vertical;
+        overflow: scroll;
+        height: 100px;
+        min-height: 100px;
+        max-height: 200px;
+      }
+      .mainLabel {
+        margin-bottom: 10px;
+      }
+
+      .submit {
+        align-self: flex-start;
+        margin-left: 10px;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $orange;
+        color: $white;
+        border: none;
+        padding: 13px 40px;
+        font-size: 16px;
+        cursor: pointer;
+        clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+
+        ion-icon {
+          font-size: 20px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contactForm {
+    background-color: $mainBg;
+    color: white;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    .left {
+      width: 100%;
+      padding: 20px 0;
+      padding-bottom: 50px;
+
+      .title {
+        font-size: 25px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+      .desc {
+        font-weight: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 0 20px;
+      }
+
+      .detail {
+        margin-top: 20px;
+        font-size: 20px;
+        text-align: center;
+        font-weight: 400;
+        // border: 2px solid red;
+      }
+    }
+    .right {
+      width: 100%;
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        .formField {
+          display: flex;
+          margin-bottom: 10px;
+          gap: 10px;
+          flex-direction: column;
+
+          .subformField {
+            width: 100%;
+            margin-bottom: 10px;
+
+            .labelSpan {
+              font-size: 14px;
+            }
+          }
+        }
+        input,
+        textarea {
+          width: 100%;
+          border: none;
+          padding: 10px;
+          border-radius: 5px;
+          font-size: 18px;
+          outline: none;
+          overflow: hidden;
+          background-color: $drop;
+          overflow: hidden !important;
+          color: white;
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+          -webkit-box-shadow: 0 0 0 30px $drop inset !important;
+        }
+
+        input:-webkit-autofill {
+          -webkit-text-fill-color: white !important;
+        }
+
+        textarea {
+          resize: vertical;
+          overflow: scroll;
+          height: 100px;
+          min-height: 100px;
+          max-height: 200px;
+        }
+        .mainLabel {
+          margin-bottom: 10px;
+        }
+
+        .submit {
+          align-self: center;
+          margin-left: 10px;
+          margin-top: 30px;
+          display: flex;
+            justify-content: center;
+          align-items: center;
+          background: $orange;
+          color: $white;
+          border: none;
+          padding: 13px 40px;
+          font-size: 16px;
+          cursor: pointer;
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+
+          ion-icon {
+            font-size: 20px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}

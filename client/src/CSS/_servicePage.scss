@@ -1,0 +1,320 @@
+.popUpLayer {
+  // border: 2px solid red;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .popUpBox {
+    // border: 2px solid red;
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    color: black;
+
+    ion-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    .popuptitle {
+      font-size: 25px;
+      margin-bottom: 0;
+      color: black;
+    }
+
+    .popupsubtitle {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 5px;
+      text-align: center;
+      margin-top: 15px;
+
+      &.key {
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+      &.value {
+        font-weight: 700;
+        margin-bottom: 0;
+        margin-top: 0;
+        color: $orange;
+      }
+    }
+
+    .desc {
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .popUpBtns {
+      // border: 2px solid red;
+      display: flex;
+      margin-top: 15px;
+      gap: 30px;
+
+      button {
+        padding: 10px 0;
+        width: 80px;
+        cursor: pointer;
+        background-color: $orange;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        margin-top: 0;
+        font-size: 16px;
+        align-self: center;
+        border: 2px solid $orange;
+
+        &.no {
+          background-color: white;
+          color: $orange;
+        }
+      }
+    }
+
+    form {
+      // border: 2px solid red;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-top: 0;
+      width: 350px;
+
+      label {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        margin-top: 10px;
+
+        span {
+          color: red;
+          font-size: 16px;
+        }
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+        font-size: 16px;
+        color: black;
+        background: $orange2;
+        border: none;
+      }
+
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 30px $orange2 inset !important;
+      }
+
+      input:-webkit-autofill {
+        -webkit-text-fill-color: black !important;
+      }
+
+      .msg {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.5);
+        margin-top: 20px;
+      }
+      .errMsg {
+        font-size: 12px;
+        color: red;
+        margin-top: 20px;
+        align-self: center;
+      }
+    }
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: $orange;
+      border-radius: 5px;
+      border: none;
+      color: white;
+      margin-top: 0;
+      font-size: 16px;
+      align-self: center;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .popUpLayer {
+    // border: 2px solid red;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .popUpBox {
+      // border: 2px solid red;
+      background-color: white;
+      padding: 20px;
+      padding-top: 25px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      width: 85%;
+      color: black;
+
+      ion-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 25px;
+        cursor: pointer;
+      }
+
+      .popuptitle {
+        font-size: 25px;
+        margin-bottom: 0;
+        color: black;
+      }
+
+      .popupsubtitle {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        text-align: center;
+        margin-top: 15px;
+
+        &.key {
+          font-weight: 700;
+          margin-bottom: 0;
+        }
+        &.value {
+          font-weight: 700;
+          margin-bottom: 0;
+          margin-top: 0;
+          color: $orange;
+        }
+      }
+
+      .desc {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .popUpBtns {
+        // border: 2px solid red;
+        display: flex;
+        margin-top: 15px;
+        gap: 30px;
+
+        button {
+          padding: 10px 0;
+          width: 80px;
+          cursor: pointer;
+          background-color: $orange;
+          border-radius: 5px;
+          border: none;
+          color: white;
+          margin-top: 0;
+          font-size: 16px;
+          align-self: center;
+          border: 2px solid $orange;
+
+          &.no {
+            background-color: white;
+            color: $orange;
+          }
+        }
+      }
+
+      form {
+        // border: 2px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: 0;
+        width: 100%;
+
+        label {
+          font-size: 14px;
+          font-weight: 500;
+          margin-bottom: 5px;
+          margin-top: 10px;
+
+          span {
+            color: red;
+            font-size: 16px;
+          }
+        }
+
+        input {
+          width: 100%;
+          padding: 8px;
+          border-radius: 5px;
+          font-size: 16px;
+          color: black;
+          background: $orange2;
+          border: none;
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+          -webkit-box-shadow: 0 0 0 30px $orange2 inset !important;
+        }
+
+        input:-webkit-autofill {
+          -webkit-text-fill-color: black !important;
+        }
+
+        .msg {
+          font-size: 12px;
+          color: rgba(0, 0, 0, 0.5);
+          margin-top: 20px;
+        }
+        .errMsg {
+          font-size: 12px;
+          color: red;
+          margin-top: 20px;
+          align-self: center;
+        }
+      }
+      button {
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: $orange;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        margin-top: 0;
+        font-size: 16px;
+        align-self: center;
+      }
+    }
+  }
+}

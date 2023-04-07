@@ -1,0 +1,210 @@
+@import "./variables";
+
+.suggestPlan {
+  background-color: $mainBg;
+  position: relative;
+
+  .popUpLayer {
+    // border: 2px solid red;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .popUpBox {
+      // border: 2px solid red;
+      background-color: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      width: 500px;
+
+      ion-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 25px;
+        cursor: pointer;
+      }
+
+      .title {
+        font-size: 25px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: black;
+        font-weight: 500;
+      }
+
+      .value {
+        color: $orange;
+        margin: 5px 0;
+      }
+
+      .subTitle {
+        font-size: 18px;
+        color: black;
+        font-weight: 700;
+        margin-top: 10px;
+      }
+      .slogan {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+
+      .desc {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      input {
+        width: 400px;
+        padding: 10px;
+        border: 2px solid $drop;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: black;
+      }
+
+      button {
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: $orange;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        font-size: 16px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .quizCompleteSlogan {
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    font-size: 30px;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .suggestPlan {
+    background-color: $mainBg;
+    position: relative;
+
+    .popUpLayer {
+      // border: 2px solid red;
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .popUpBox {
+        // border: 2px solid red;
+        background-color: white;
+        padding: 20px 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        width: 90vw;
+
+        ion-icon {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 25px;
+          cursor: pointer;
+        }
+
+        .title {
+          font-size: 25px;
+          margin-top: 15px;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+
+        p {
+          color: black;
+          font-weight: 500;
+        }
+
+        .value {
+          color: $orange;
+          margin: 5px 0;
+        }
+
+        .subTitle {
+          font-size: 18px;
+          color: black;
+          font-weight: 700;
+        }
+        .slogan {
+          font-size: 20px;
+          font-weight: 500;
+          margin-bottom: 5px;
+        }
+
+        .desc {
+          font-size: 16px;
+          margin-bottom: 30px;
+        }
+
+        input {
+          width: 80vw;
+          padding: 10px;
+          border: 2px solid $drop;
+          border-radius: 5px;
+          margin-bottom: 10px;
+          font-size: 16px;
+          color: black;
+        }
+
+        button {
+          padding: 10px 20px;
+          cursor: pointer;
+          background-color: $orange;
+          border-radius: 5px;
+          border: none;
+          color: white;
+          font-size: 16px;
+          margin-top: 20px;
+        }
+      }
+    }
+
+    .quizCompleteSlogan {
+      color: white;
+      text-align: center;
+      padding-top: 20px;
+      margin: 0;
+      margin-bottom: 20px;
+      font-size: 22px;
+      font-weight: 500;
+    }
+  }
+}

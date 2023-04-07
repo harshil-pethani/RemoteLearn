@@ -1,0 +1,569 @@
+@import "./variables";
+
+.userDetail {
+  height: fit-content;
+  min-height: calc(100vh - 130px);
+  width: 100%;
+  background-color: black;
+  color: white;
+  // border: 2px solid red;
+  display: flex;
+  align-items: center;
+  // padding: 40px 0;
+
+  .container {
+    display: flex;
+    width: 100%;
+    .userDetailLeft {
+      width: 50%;
+      padding-left: 150px;
+      // padding-top: 20px;
+      // border: 2px solid red;
+
+      .userDetailTitle {
+        font-size: 30px;
+      }
+
+      form {
+        // border: 2px solid red;
+        width: 80%;
+        margin-top: 30px;
+
+        label {
+          // border: 2px solid red;
+          margin-left: 10px;
+        }
+
+        .formField {
+          border: 1px solid white;
+          // border: 2px solid red;
+          margin-top: 8px;
+          margin-bottom: 10px;
+          background-color: $drop;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: 10px;
+          padding: 5px 15px;
+          overflow: hidden;
+
+          &.promoField {
+            padding: 0;
+            margin-bottom: 10px;
+
+            ion-icon {
+              color: $orange;
+              margin: 5px 15px;
+              font-size: 35px;
+              margin-right: 0;
+            }
+          }
+
+          ion-icon {
+            color: $orange;
+            font-size: 25px;
+          }
+
+          button {
+            border-radius: 0;
+            // padding: 0;
+          }
+
+          input {
+            width: 95%;
+            color: white;
+            padding: 8px 10px;
+            background-color: $drop;
+            border: none;
+            outline: none;
+            font-size: 16px;
+          }
+
+          input:-webkit-autofill,
+          input:-webkit-autofill:hover,
+          input:-webkit-autofill:focus,
+          input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px $drop inset !important;
+          }
+
+          input:-webkit-autofill {
+            -webkit-text-fill-color: white !important;
+          }
+        }
+        .resMsg {
+          // color: #3ccf4e;
+          margin-bottom: 10px;
+        }
+        button {
+          border: none;
+          background-color: $orange;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 12px 18px;
+          color: white;
+          cursor: pointer;
+          border-radius: 5px;
+          font-size: 18px;
+        }
+      }
+      // .stripeBtn {
+      //   background: none !important;
+      //   span {
+      //     background-image: none !important;
+      //     background: $orange !important;
+      //     font-family: inherit !important;
+      //     padding: 8px 18px !important;
+      //     height: auto !important;
+      //     font-size: 16px !important;
+      //     font-weight: 300 !important;
+      //     border: none !important;
+      //     position: relative;
+      //     display: block;
+      //     line-height: 30px;
+      //     color: white !important;
+      //     box-shadow: none !important;
+      //     text-shadow: none !important;
+      //     border-radius: 5px !important;
+      //   }
+      // }
+      .payBtn {
+        border: none;
+        background-color: $orange;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 18px;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        outline: none;
+        font-size: 18px;
+        margin-top: 20px;
+
+        &:disabled {
+          cursor: not-allowed;
+          opacity: 0.6;
+        }
+      }
+    }
+    .userDetailRight {
+      // padding-right: 150px;
+      // padding-top: 20px;
+      width: 50%;
+      // border: 2px solid red;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .userDetailCard {
+        // border: 2px solid red;
+        overflow: hidden;
+        border-radius: 10px;
+        width: fit-content;
+        background-color: $orange;
+        padding: 15px;
+        justify-content: flex-start;
+        width: 45%;
+
+        .cardTitle {
+          font-size: 20px;
+          font-weight: 300;
+          word-wrap: break-word;
+        }
+
+        .detailBox {
+          // border: 2px solid red;
+          display: flex;
+          margin-top: 15px;
+          gap: 15px;
+
+          .boxLeft {
+            // border: 2px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            .userImage {
+              border: 2px solid white;
+              overflow: hidden;
+              padding: 5px;
+              border-radius: 50%;
+              height: 50px;
+              width: 50px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              ion-icon {
+                font-size: 35px;
+              }
+            }
+          }
+          .boxRight {
+            // border: 2px solid red;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+
+            p {
+              font-size: 14px;
+            }
+            .useremail {
+              word-wrap: break-word;
+            }
+
+            .username {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+
+      .planDetailCard {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        background-color: $orange;
+        margin-top: 30px;
+        border-radius: 10px;
+        width: 45%;
+
+        .cardTitle {
+          font-size: 20px;
+          font-weight: 300;
+        }
+
+        .detailBox {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+          margin-top: 10px;
+
+          p {
+            font-size: 14px;
+            font-weight: 300;
+          }
+
+          .dates,
+          .timeSlot {
+            font-weight: 500;
+          }
+
+          .dateValue {
+            margin-bottom: 10px;
+          }
+
+          .trainerDetail {
+            // border: 2px solid red;
+            display: flex;
+            margin: 5px 0;
+            align-items: center;
+            gap: 20px;
+
+            .trainerDetailRight {
+              p {
+                &:first-child {
+                  font-weight: 500;
+                }
+              }
+            }
+            .trainerDetailLeft {
+              // border: 2px solid red;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              display: none;
+              img {
+                height: 80px;
+                border-radius: 10px;
+              }
+            }
+          }
+        }
+
+        .paymentDetailBox {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 10px;
+          padding: 10px 0;
+          // border: 2px solid red;
+          border-top: 2px solid rgba(255, 255, 255, 0.2);
+
+          .boxRight {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            // border: 2px solid red;
+
+            .totalAmount {
+              font-weight: 500;
+              // border: 2px solid red;
+              font-size: 18px;
+            }
+            .sessionAmount {
+              // border: 2px solid red;
+              text-align: right;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .userDetail {
+    height: fit-content;
+    min-height: fit-content;
+    width: 100%;
+    background-color: $mainBg;
+    color: white;
+    // border: 2px solid red;
+    display: flex;
+    padding: 20px 0;
+    align-items: center;
+
+    .container {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      width: 100%;
+      padding: 10px;
+
+      .userDetailLeft {
+        width: 100%;
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 20px;
+        // border: 2px solid red;
+
+        .userDetailTitle {
+          font-size: 26px;
+          text-align: center;
+          font-weight: 400;
+        }
+
+        form {
+          // border: 2px solid red;
+          display: flex;
+          flex-direction: column;
+          width: 90%;
+          margin-top: 20px;
+
+          label {
+            // border: 2px solid red;
+            margin-left: 0;
+          }
+
+          .formField {
+            // border: 2px solid red;
+            border: 1px solid white;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            background-color: $drop;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 5px;
+            padding: 5px 15px;
+
+            &.promoField {
+              padding: 0;
+              ion-icon {
+                font-size: 35px;
+              }
+            }
+
+            ion-icon {
+              color: $orange;
+              font-size: 25px;
+            }
+
+            input {
+              width: 95%;
+              color: white;
+              padding: 8px 10px;
+              background-color: $drop;
+              border: none;
+              outline: none;
+              font-size: 16px;
+            }
+          }
+
+          button {
+            align-self: center;
+            border: none;
+            background-color: $orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12px 18px;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+
+            img {
+              height: 22px;
+              margin-left: 7px;
+            }
+          }
+        }
+      }
+      .userDetailRight {
+        // padding-right: 150px;
+        padding-bottom: 20px;
+        width: 90%;
+        // border: 2px solid red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .userDetailCard {
+          // border: 2px solid red;
+          border-radius: 10px;
+          width: fit-content;
+          background-color: $orange;
+          padding: 15px;
+          justify-content: flex-start;
+          width: 100%;
+          display: none;
+
+          .cardTitle {
+            font-size: 20px;
+            font-weight: 300;
+          }
+
+          .detailBox {
+            // border: 2px solid red;
+            display: flex;
+            margin-top: 15px;
+            gap: 15px;
+
+            .boxLeft {
+              // border: 2px solid red;
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+
+              .userImage {
+                border: 2px solid white;
+                overflow: hidden;
+                padding: 5px;
+                border-radius: 50%;
+                height: 50px;
+                width: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                ion-icon {
+                  font-size: 35px;
+                }
+              }
+            }
+            .boxRight {
+              // border: 2px solid red;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              gap: 5px;
+
+              p {
+                font-size: 14px;
+              }
+
+              .username {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+
+        .planDetailCard {
+          display: flex;
+          flex-direction: column;
+          padding: 15px;
+          background-color: $orange;
+          margin-top: 0;
+          border-radius: 10px;
+          width: 100%;
+
+          .cardTitle {
+            font-size: 25px;
+            font-weight: 300;
+          }
+
+          .detailBox {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            margin-top: 10px;
+
+            p {
+              font-size: 14px;
+              font-weight: 300;
+            }
+
+            .dates,
+            .timeSlot {
+              font-weight: 500;
+            }
+
+            .dateValue {
+              margin-bottom: 10px;
+            }
+
+            .trainerDetail {
+              // border: 2px solid red;
+              display: flex;
+              margin: 5px 0;
+              align-items: center;
+              gap: 20px;
+
+              .trainerDetailRight {
+                p {
+                  &:first-child {
+                    font-weight: 500;
+                  }
+                }
+              }
+            }
+          }
+
+          .paymentDetailBox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            padding: 10px 0;
+            // border: 2px solid red;
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+
+            .boxRight {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              // border: 2px solid red;
+
+              .totalAmount {
+                font-weight: 500;
+                // border: 2px solid red;
+                font-size: 18px;
+              }
+              .sessionAmount {
+                // border: 2px solid red;
+                text-align: right;
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

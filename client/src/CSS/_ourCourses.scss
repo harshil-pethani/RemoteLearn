@@ -1,0 +1,172 @@
+@import "./variables";
+
+.ourCourses {
+  background-color: $mainBg;
+  color: white;
+  min-height: 100vh;
+  height: fit-content;
+  width: 100%;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .title {
+    margin: 0;
+    font-size: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 48px;
+      height: 5px;
+      top: -12px;
+      left: 0;
+      transform: skew(-40deg);
+      position: absolute;
+      background-color: $orange;
+    }
+  }
+  .cardContainer {
+    // border: 2px solid red;
+    margin-top: 50px;
+    padding: 20px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+
+    .card {
+      // border: 2px solid red;
+      height: 200px;
+      width: auto;
+      width: 400px;
+      min-width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: $orange;
+      font-weight: 500;
+      gap: 10px;
+      border-radius: 10px;
+      box-shadow: -10px -10px 20px 3px rgba(82, 82, 82, 0.3),
+        10px 10px 20px 10px #161818;
+      transition: box-shadow 0.8s ease;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 10px 10px 20px 3px rgba(82, 82, 82, 0.3),
+          -10px -10px 20px 10px #161818;
+      }
+
+      img {
+        height: 80px;
+      }
+      .courseTitle {
+        font-size: 20px;
+      }
+    }
+  }
+  .backgroundFont {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    right: 100px;
+    top: 25px;
+    img {
+      width: 75%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ourCourses {
+    background-color: $mainBg;
+    color: white;
+    min-height: 100vh;
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    // border: 2px solid red;
+
+    .title {
+      margin: 0;
+      font-size: 28px;
+      margin-right: 0;
+      margin-left: 0;
+      font-weight: 500;
+      text-align: center;
+      text-transform: uppercase;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 48px;
+        height: 5px;
+        top: -12px;
+        left: 50%;
+        transform: skew(-40deg) translateX(-50%);
+        position: absolute;
+        background-color: $orange;
+      }
+    }
+    .cardContainer {
+      // border: 2px solid red;
+      margin-top: 50px;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 60px;
+
+      .card {
+        // border: 2px solid red;
+        height: 40vw;
+        width: auto;
+        width: 85%;
+        min-width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: $orange;
+        font-weight: 500;
+        gap: 10px;
+        border-radius: 10px;
+        box-shadow: -10px -10px 20px 3px rgba(82, 82, 82, 0.3),
+          10px 10px 20px 10px #161818;
+        transition: box-shadow 0.8s ease;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 10px 10px 20px 3px rgba(82, 82, 82, 0.3),
+            -10px -10px 20px 10px #161818;
+        }
+
+        img {
+          height: 60px;
+        }
+        .courseTitle {
+          font-size: 20px;
+        }
+      }
+    }
+    .backgroundFont {
+      position: absolute;
+      display: flex;
+      justify-content: flex-end;
+      right: 100px;
+      top: 25px;
+      display: none;
+      img {
+        width: 75%;
+      }
+    }
+  }
+}

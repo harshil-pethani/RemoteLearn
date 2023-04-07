@@ -1,0 +1,344 @@
+@import "./variables";
+
+.testimonials {
+  height: fit-content;
+  width: 100%;
+  background-color: $mainBg;
+  color: $white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+  //   border: 2px solid red;
+
+  .title {
+    margin: 0;
+    font-size: 50px;
+    // margin-top: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 48px;
+      height: 5px;
+      top: -12px;
+      left: 0;
+      transform: skew(-40deg);
+      position: absolute;
+      background-color: $orange;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // border: 2px solid red;
+    margin-top: 100px;
+
+    .slider {
+      width: 1300px;
+      height: 450px;
+      //   border: 2px solid red;
+      display: flex;
+      //   flex-wrap: wrap;
+      //   overflow-x: auto;
+      // overflow-y: hidden;
+      overflow: hidden;
+      justify-content: flex-start;
+
+      .allSlides {
+        display: flex;
+        // transform: translateX(-1000px);
+        transition: all 0.7s ease;
+        // border: 2px solid red;
+        .slide {
+          font-size: 200px;
+          width: 1300px;
+          height: fit-content;
+          // border: 2px solid red;
+          display: flex;
+
+          .left {
+            // border: 2px solid red;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            img {
+              width: 70%;
+              height: 400px;
+              object-fit: cover;
+              clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+            }
+          }
+          .right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 10px 0;
+            padding-right: 50px;
+            padding-left: 50px;
+            height: fit-content;
+
+            .desc {
+              font-size: 20px;
+              margin-bottom: 20px;
+              text-align: left;
+            }
+            .username {
+              font-size: 28px;
+              font-weight: 500;
+              text-transform: uppercase;
+            }
+            .viewClass {
+              color: $orange;
+              font-size: 22px;
+              margin-top: 10px;
+              font-weight: 600;
+              display: flex;
+              align-items: center;
+              cursor: pointer;
+              // border: 2px solid red;
+
+              ion-icon {
+                margin-left: 10px;
+                font-size: 20px;
+              }
+            }
+          }
+        }
+        &.active0 {
+          transform: translateX(0);
+        }
+        &.active1 {
+          transform: translateX(-1300px);
+        }
+        &.active2 {
+          transform: translateX(-2600px);
+        }
+        &.active3 {
+          transform: translateX(-3900px);
+        }
+        &.active4 {
+          transform: translateX(-5200px);
+        }
+        &.active5 {
+          transform: translateX(-6500px);
+        }
+        &.active6 {
+          transform: translateX(-7800px);
+        }
+      }
+    }
+
+    .slideController {
+      display: flex;
+      .dot {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: $orange;
+        margin: 10px 5px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+      }
+      .active {
+        width: 30px;
+        border-radius: 30px;
+      }
+    }
+  }
+
+  .backgroundFont {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    right: 50px;
+    top: 25px;
+    img {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .testimonials {
+    height: fit-content;
+    width: 100%;
+    background-color: $mainBg;
+    color: $white;
+    padding: 20px 10px;
+    padding-top: 70px;
+    position: relative;
+
+    .title {
+      margin: 0;
+      // border: 2px solid red;
+      font-size: 28px;
+      // margin-top: 50px;
+      margin-right: 0;
+      margin-left: 0;
+      font-weight: 500;
+      text-transform: uppercase;
+      position: relative;
+      text-align: center;
+
+      &::before {
+        content: "";
+        width: 48px;
+        height: 5px;
+        top: -12px;
+        left: 50%;
+        transform: skew(-40deg) translateX(-50%);
+        position: absolute;
+        background-color: $orange;
+      }
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      // border: 2px solid red;
+      margin-top: 30px;
+
+      .slider {
+        width: 100%;
+        height: fit-content;
+        // border: 2px solid red;
+        display: flex;
+        overflow: hidden;
+        justify-content: flex-start;
+
+        .allSlides {
+          display: flex;
+          gap: 5vw;
+          justify-content: center;
+          // transform: translateX(-1000px);
+          transition: all 0.7s ease;
+          .slide {
+            width: 95vw;
+            // border: 2px solid red;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            align-items: center;
+
+            .left {
+              // border: 2px solid red;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 10px 0;
+              img {
+                width: 80%;
+                height: auto;
+                object-fit: cover;
+                clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+              }
+            }
+            .right {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              padding: 10px;
+              // border: 2px solid red;
+              margin: 0;
+
+              .desc {
+                font-size: 18px;
+                margin-bottom: 20px;
+                text-align: center;
+              }
+              .username {
+                font-size: 26px;
+                text-align: center;
+                font-weight: 500;
+                text-transform: uppercase;
+              }
+              .viewClass {
+                color: $orange;
+                font-size: 20px;
+                margin-top: 10px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                // border: 2px solid red;
+                display: flex;
+                justify-content: center;
+
+                ion-icon {
+                  margin-left: 10px;
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+          &.active0 {
+            transform: translateX(0);
+          }
+          &.active1 {
+            transform: translateX(-100vw);
+          }
+          &.active2 {
+            transform: translateX(-200vw);
+          }
+          &.active3 {
+            transform: translateX(-300vw);
+          }
+          &.active4 {
+            transform: translateX(-400vw);
+          }
+          &.active5 {
+            transform: translateX(-500vw);
+          }
+          &.active6 {
+            transform: translateX(-600vw);
+          }
+        }
+      }
+
+      .slideController {
+        display: flex;
+        // border: 2px solid red;
+        .dot {
+          height: 10px;
+          width: 10px;
+          border-radius: 50%;
+          background-color: $orange;
+          margin: 10px 5px;
+          cursor: pointer;
+          transition: all 0.5s ease;
+        }
+        .active {
+          width: 30px;
+          border-radius: 30px;
+        }
+      }
+    }
+
+    .backgroundFont {
+      position: static;
+      // border: 2px solid red;
+      margin-top: 10px;
+      // width: 70%;
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

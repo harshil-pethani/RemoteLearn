@@ -1,0 +1,46 @@
+@import "./variables";
+
+.errorComponent {
+  background-color: $mainBg;
+  height: calc(100vh - 130px);
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+
+  img {
+    height: 300px;
+    margin-top: 20px;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  .desc {
+    width: 40%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .learnmore {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $orange;
+    color: $white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+
+    ion-icon {
+      font-size: 20px;
+      margin-left: 10px;
+    }
+  }
+}

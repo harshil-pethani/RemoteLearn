@@ -1,0 +1,639 @@
+@import "./variables";
+
+.allplans {
+  width: 100%;
+  background-color: $mainBg;
+  height: fit-content;
+  color: white;
+
+  .searchBar {
+    padding: 0 100px;
+
+    .field {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 5px;
+      // gap: 5px;
+
+      ion-icon {
+        font-size: 25px;
+        color: gray;
+        padding: 10px;
+        // border: 2px solid red;
+      }
+
+      input {
+        padding: 10px;
+        width: 100%;
+        border: none;
+      }
+    }
+  }
+}
+
+.courseContainer {
+  // border: 2px solid red;
+  width: 100%;
+  background-color: $mainBg;
+  height: fit-content;
+  color: white;
+  position: relative;
+  padding: 50px 100px;
+
+  .title {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 48px;
+      height: 5px;
+      top: -12px;
+      left: 0;
+      transform: skew(-40deg);
+      position: absolute;
+      background-color: $orange;
+    }
+  }
+
+  .courseHighlight {
+    // border: 2px solid red;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    .subHighlight {
+      border: 2px solid white;
+      border-radius: 5px;
+      padding: 10px;
+    }
+  }
+
+  .courseContent {
+    // border: 2px solid red;
+    display: flex;
+    gap: 20px;
+    .left {
+      width: 50%;
+      // border: 2px solid red;
+      .description {
+        p {
+          margin-bottom: 20px;
+          font-size: 18px;
+        }
+
+        ul {
+          li {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+
+    .right {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      flex-direction: column;
+      // border: 2px solid red;
+      .image {
+        margin-right: 50px;
+        img {
+          height: 450px;
+        }
+      }
+      .priceContainer {
+        border: 2px solid $orange;
+        padding: 10px 100px;
+        align-self: center;
+        margin-top: 20px;
+        background-color: $orange;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .batchDetails {
+    // border: 2px solid red;
+    margin-top: 10px;
+
+    .batchTitle {
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    .batchContainer {
+      // border: 2px solid red;
+      display: flex;
+      width: 95%;
+      flex-wrap: wrap;
+      column-gap: 200px;
+      row-gap: 20px;
+
+      .singleBatch {
+        // border: 2px solid red;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 500px;
+
+        p {
+          width: 250px;
+          // border: 2px solid red;
+        }
+
+        button {
+          width: 150px;
+          background: $orange;
+          color: white;
+          padding: 10px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          border: 2px solid $orange;
+          transition: all 0.5s ease;
+          font-weight: 300;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+
+          &.closed {
+            opacity: 0.5;
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+
+  .backgroundFont {
+    // position: absolute;
+    display: flex;
+    right: 100px;
+    top: 20px;
+    margin: 10px 0;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .allplans {
+    padding: 10px;
+    width: 100%;
+    background-color: $mainBg;
+    height: fit-content;
+    color: white;
+
+    .planContainer {
+      padding: 0;
+      padding-bottom: 20px;
+      position: relative;
+
+      .planDetails {
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+        margin-bottom: 0;
+        padding-top: 70px;
+
+        &.newUserPlan {
+          padding-top: 0;
+        }
+        // border: 2px solid red;
+
+        .suggestion {
+          position: absolute;
+          top: 0;
+          // border: 2px solid red;
+          text-align: center;
+          color: $orange;
+        }
+        > .planLeft {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          width: 100%;
+          // border: 2px solid red;
+          padding: 30px 0;
+          padding-bottom: 0;
+
+          .serviceBgFontMobile {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 15px;
+
+            img {
+              height: 30px;
+            }
+          }
+
+          > .title {
+            font-size: 25px;
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 15px;
+            position: relative;
+
+            &::before {
+              content: "";
+              width: 48px;
+              height: 5px;
+              top: -12px;
+              left: 50%;
+              transform: skew(-40deg) translateX(-50%);
+              position: absolute;
+              background-color: $orange;
+            }
+          }
+
+          > .desc {
+            width: 90%;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+          }
+
+          a {
+            text-decoration: none;
+            width: 100%;
+            // border: 2px solid red;
+            > button {
+              background-color: $orange;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              color: white;
+              padding: 10px 5px;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              margin-bottom: 10px;
+              width: 100%;
+
+              .btnTop {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                // border: 2px solid red;
+                justify-content: space-between;
+
+                .btnTitle {
+                  font-size: 16px;
+                  font-weight: 700;
+                }
+                .price {
+                  font-size: 16px;
+                  font-weight: 300;
+                  letter-spacing: 1px;
+                  span {
+                    font-size: 22px;
+                    font-weight: 600;
+                    margin-right: 5px;
+                  }
+                }
+              }
+              .btnBottom {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                // border: 2px solid red;
+
+                .btnDesc {
+                  font-size: 14px;
+                  font-weight: 300;
+                }
+                .subPrice {
+                  font-size: 14px;
+                  letter-spacing: 1px;
+                  font-weight: 0;
+                }
+              }
+            }
+          }
+
+          .allSlotsContainer {
+            // border: 2px solid red;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .slotSlogan {
+              font-size: 22px;
+              font-weight: 300;
+            }
+
+            .currentSlots {
+              // border: 2px solid red;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              margin-top: 20px;
+
+              .currentSlot {
+                display: flex;
+                // border: 2px solid red;
+                // justify-content: space-between;
+                flex-direction: column;
+
+                .daySlot {
+                  display: flex;
+                  justify-content: space-between;
+                  .dates {
+                    font-size: 16px;
+                  }
+                  .btn {
+                    background-color: $orange;
+                    color: white;
+                    border-radius: 5px;
+                    border: none;
+                    padding: 8px 20px;
+                    width: 110px;
+                    cursor: pointer;
+                    &:disabled {
+                      opacity: 0.6;
+                      cursor: not-allowed;
+                    }
+                  }
+                }
+
+                .timeSlots {
+                  display: flex;
+                  gap: 10px;
+                  margin-top: 10px;
+                  justify-content: space-between;
+                  flex-wrap: wrap;
+
+                  .timeSlot {
+                    display: flex;
+                    width: 48%;
+                    // border: 2px solid red;
+
+                    input {
+                      display: none;
+                    }
+
+                    input[type="radio"]:checked + .timeBox {
+                      background-color: $orange;
+                    }
+
+                    // border: 2px solid red;
+                    .timeBox {
+                      border: 2px solid $orange;
+                      border-radius: 5px;
+                      width: 100%;
+                      display: flex;
+                      align-items: center;
+                      gap: 5px;
+                      cursor: pointer;
+                      padding: 8px 5px;
+                      color: white;
+                      transition: all 0.5s ease;
+
+                      p {
+                        font-size: 14px;
+                      }
+
+                      &:hover {
+                        background-color: $orange;
+                      }
+
+                      ion-icon {
+                        color: white;
+                        font-size: 30px;
+                        transition: all 0.5s ease;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        > .planRight {
+          width: 100%;
+          // border: 2px solid red;
+          display: flex;
+          justify-content: flex-end;
+          padding-top: 0;
+          img {
+            height: auto;
+            width: 100%;
+            // margin-right: 50px;
+          }
+        }
+      }
+      .serviceBgFont {
+        display: none;
+      }
+    }
+
+    .planContainer:nth-child(2n) {
+      .planDetails {
+        flex-direction: column-reverse;
+
+        > .planLeft {
+          align-items: center;
+        }
+
+        > .planRight {
+          justify-content: center;
+        }
+      }
+    }
+
+    .searchBar {
+      padding: 0;
+
+      .field {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        border-radius: 5px;
+        // gap: 5px;
+
+        ion-icon {
+          font-size: 20px;
+          color: gray;
+          padding: 5px;
+          // border: 2px solid red;
+        }
+
+        input {
+          padding: 10px;
+          width: 100%;
+          border: none;
+        }
+      }
+    }
+  }
+
+  .courseContainer {
+    // border: 2px solid red;
+    width: 100%;
+    background-color: $mainBg;
+    height: fit-content;
+    color: white;
+    position: relative;
+    padding: 10px;
+    margin-top: 20px;
+
+    .title {
+      margin: 0;
+      font-size: 26px;
+      font-weight: 500;
+      text-transform: uppercase;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 48px;
+        height: 5px;
+        top: -12px;
+        left: 0;
+        transform: skew(-40deg);
+        position: absolute;
+        background-color: $orange;
+      }
+    }
+
+    .courseHighlight {
+      // border: 2px solid red;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+
+      .subHighlight {
+        border: 2px solid white;
+        border-radius: 5px;
+        padding: 5px;
+      }
+    }
+
+    .courseContent {
+      // border: 2px solid red;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 20px;
+      .left {
+        width: 100%;
+        // border: 2px solid red;
+        .description {
+          p {
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: left;
+          }
+
+          ul {
+            li {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+
+      .right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        // border: 2px solid red;
+        .image {
+          margin-right: 0;
+          img {
+            height: 250px;
+          }
+        }
+        .priceContainer {
+          border: 2px solid $orange;
+          padding: 5px 40px;
+          align-self: center;
+          margin-top: 20px;
+          background-color: $orange;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .batchDetails {
+      // border: 2px solid red;
+      margin-top: 10px;
+
+      .batchTitle {
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      .batchContainer {
+        // border: 2px solid red;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        row-gap: 20px;
+
+        .singleBatch {
+          // border: 2px solid red;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+
+          p {
+            width: 250px;
+            font-size: 14px;
+            // border: 2px solid red;
+          }
+
+          button {
+            width: fit-content;
+            background: $orange;
+            color: white;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 2px solid $orange;
+            transition: all 0.5s ease;
+            font-weight: 300;
+            letter-spacing: 1px;
+            font-size: 13px;
+            text-transform: uppercase;
+
+            &.closed {
+              opacity: 0.5;
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
+    }
+
+    .backgroundFont {
+      // position: absolute;
+      display: flex;
+      right: 100px;
+      top: 20px;
+      margin: 10px 0;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

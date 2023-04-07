@@ -1,0 +1,107 @@
+@import "./variables";
+
+.offerBanner {
+  //   border: 2px solid red;
+  display: flex;
+  background-color: $drop;
+  color: white;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 100px;
+  position: relative;
+  gap: 30px;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+
+  .bannerTitle {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .timerBox {
+    display: flex;
+    flex-direction: column;
+    // border: 2px solid red;
+    .timer {
+      font-weight: 500;
+    }
+    .timerTitles {
+      // border: 2px solid red;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 3px;
+      h4 {
+        font-size: 12px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  ion-icon {
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .offerBanner {
+    // border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    background-color: $drop;
+    color: white;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 50px;
+    position: relative;
+    gap: 10px;
+    display: none;
+
+    &.active {
+      display: flex;
+    }
+
+    .bannerTitle {
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .timerBox {
+      display: flex;
+      flex-direction: column;
+      // border: 2px solid red;
+      .timer {
+        font-weight: 500;
+      }
+      .timerTitles {
+        // border: 2px solid red;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3px;
+        h4 {
+          font-size: 12px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    ion-icon {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      transform: none;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  }
+}

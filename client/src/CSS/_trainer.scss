@@ -1,0 +1,338 @@
+@import "./variables";
+
+.trainers {
+  display: flex;
+  flex-direction: column;
+  background-color: $mainBg;
+  height: fit-content;
+  padding-top: 80px;
+  width: 100%;
+  // background-color: red;
+
+  .title {
+    // border: 2px solid red;
+    margin: 0;
+    font-size: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    color: white;
+
+    &::before {
+      content: "";
+      width: 48px;
+      height: 5px;
+      top: -12px;
+      left: 0;
+      transform: skew(-40deg);
+      position: absolute;
+      background-color: $orange;
+    }
+  }
+
+  .trainerDetail {
+    // height: 100vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    position: relative;
+    // border: 2px solid red;
+    padding: 50px 0;
+
+    .left {
+      width: 55%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .imgbox {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        margin-right: 70px;
+        // border: 2px solid red;
+
+        img {
+          border-radius: 10px;
+          height: 500px;
+        }
+      }
+    }
+    .right {
+      width: 45%;
+      // border: 2px solid red;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .title {
+        font-size: 30px;
+        margin-left: 30px;
+        margin-bottom: 30px;
+        font-weight: 500;
+        text-transform: uppercase;
+        position: relative;
+
+        &::before {
+          content: "";
+          width: 48px;
+          height: 5px;
+          top: -12px;
+          left: 0;
+          transform: skew(-40deg);
+          position: absolute;
+          background-color: $orange;
+        }
+      }
+      .desc {
+        margin-left: 30px;
+        margin-right: 100px;
+        text-align: left;
+        line-height: 22px;
+        font-size: 18px;
+        p {
+          margin-bottom: 40px;
+        }
+      }
+      .learnmore {
+        align-self: flex-start;
+        margin-left: 30px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $orange;
+        color: $white;
+        border: none;
+        padding: 13px 40px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+
+        ion-icon {
+          font-size: 20px;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .personalTrainerFont {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 100px;
+
+      img {
+        width: 70%;
+        //   border: 2px solid red;
+      }
+      &.cmo {
+        img {
+          width: 70%;
+        }
+      }
+    }
+  }
+
+  .trainerDetail:nth-child(2n + 1) {
+    flex-direction: row-reverse;
+    position: relative;
+    // border: 2px solid red;
+
+    .left {
+      justify-content: flex-start;
+      .imgbox {
+        margin-right: 100px;
+      }
+    }
+    .right {
+      margin-right: 30px;
+      margin-left: 100px;
+    }
+
+    .personalTrainerFont {
+      position: absolute;
+      top: 50%;
+      width: fit-content;
+      //   border: 2px solid red;
+      transform: translateY(-50%);
+      //   left: 90%;
+      left: auto;
+      right: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .trainers {
+    display: flex;
+    flex-direction: column;
+    background-color: $mainBg;
+    height: fit-content;
+    padding: 10px;
+    width: 100%;
+    // border: 2px solid red;
+    // background-color: red;
+
+    .title {
+      // border: 2px solid red;
+      margin: 0;
+      font-size: 28px;
+      margin-right: 0;
+      margin-left: 0;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-align: center;
+      position: relative;
+      color: white;
+
+      &::before {
+        content: "";
+        width: 48px;
+        height: 5px;
+        top: -12px;
+        left: 50%;
+        transform: skew(-40deg) translateX(-50%);
+        position: absolute;
+        background-color: $orange;
+      }
+    }
+
+    .trainerDetail {
+      // height: 100vh;
+      width: 100%;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin-bottom: 10px;
+      // border: 2px solid red;
+      padding-top: 0px;
+
+      .left {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 30px;
+
+        .imgbox {
+          display: flex;
+          justify-content: flex-end;
+          flex-wrap: wrap;
+          margin-right: 0;
+          //   border: 2px solid red;
+
+          img {
+            height: auto;
+            width: 100%;
+          }
+        }
+      }
+
+      .right {
+        width: 100%;
+        // border: 2px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        // border: 2px solid red;
+
+        .title {
+          font-size: 22px;
+          margin-left: 0;
+          margin-bottom: 10px;
+          font-weight: 500;
+          text-transform: uppercase;
+          text-align: center;
+          position: relative;
+
+          &::before {
+            content: "";
+            width: 48px;
+            height: 5px;
+            top: -12px;
+            left: 50%;
+            transform: skew(-40deg) translateX(-50%);
+            position: absolute;
+            background-color: $orange;
+          }
+        }
+        .desc {
+          margin-left: 20px;
+          margin-right: 20px;
+          text-align: justify;
+          line-height: 22px;
+          font-size: 16px;
+          p {
+            margin-bottom: 10px;
+          }
+        }
+        .learnmore {
+          align-self: center;
+          margin-left: 0;
+          margin-top: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: $orange;
+          color: $white;
+          border: none;
+          padding: 13px 40px;
+          font-size: 16px;
+          cursor: pointer;
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+
+          ion-icon {
+            font-size: 20px;
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .personalTrainerFont {
+        display: none;
+      }
+
+      .personalTrainerMobile {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        // border: 2px solid red;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .trainerDetail:nth-child(2n + 1) {
+      flex-direction: column;
+      position: relative;
+      // border: 2px solid red;
+
+      .left {
+        justify-content: flex-start;
+        .imgbox {
+          margin-right: 0;
+          // border: 2px solid red;
+        }
+      }
+      .right {
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+      .personalTrainerFont {
+        display: none;
+      }
+    }
+  }
+}

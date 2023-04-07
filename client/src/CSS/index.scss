@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap");
+@import "./navbar";
+@import "./homeHeader";
+@import "./whoAreWe";
+@import "./highLight";
+@import "./ourCourses";
+@import "./testimonials";
+@import "./subscribe";
+@import "./footer";
+@import "./whyChoose";
+@import "./trainer";
+@import "./quiz";
+@import "./allplans";
+@import "./faq";
+@import "./contactForm";
+@import "./referral";
+@import "./userDetail";
+@import "./scrollToTopArrow";
+@import "./adminlogin";
+@import "./adminTop";
+@import "./adminLayout";
+@import "./loader";
+@import "./offerBanner";
+@import "./errorPage";
+@import "./checkoutSuccess";
+@import "./servicePage";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: unset;
+}
+
+button,
+.learnmore {
+  outline: none;
+  font-family: "Maven Pro" !important;
+  font-weight: 500 !important;
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  font-family: "Maven Pro", sans-serif !important;
+}
+
+input {
+  outline: none;
+}
+
+p {
+  line-height: normal !important;
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: $orange #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $orange;
+  // border-radius: 10px;
+  border: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+.resMsg {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #3ccf4e;
+  // text-align: center;
+
+  &.error {
+    color: #e64848;
+  }
+}
+
+button:disabled {
+  opacity: 0.7 !important;
+  cursor: not-allowed !important;
+}

@@ -1,0 +1,7748 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap");
+.navbar {
+  width: 100%;
+  height: 130px;
+  background-color: #222222;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  padding: 0 100px;
+  transition: all 0.7s ease;
+}
+.navbar.homeNav {
+  background-color: rgb(23, 23, 23);
+}
+.navbar.scrolled {
+  background-color: rgb(23, 23, 23);
+}
+.navbar .leftNav {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.navbar .leftNav img {
+  height: 100px;
+}
+.navbar .rightNav {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.navbar .rightNav .btns .navBtn {
+  padding: 15px 45px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.navbar .rightNav .btns .navBtn.joinNow {
+  -webkit-clip-path: polygon(15% 0%, 100% 0%, 87% 100%, 0% 100%);
+          clip-path: polygon(15% 0%, 100% 0%, 87% 100%, 0% 100%);
+  background: #ffffff;
+  color: #038d9f;
+}
+.navbar .rightNav .btns .navBtn.freeClass {
+  padding: 15px 35px;
+  -webkit-clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(14% 0%, 100% 0%, 100% 100%, 0% 100%);
+  margin-left: -23.5px;
+  background: #038d9f;
+  color: #ffffff;
+}
+.navbar .rightNav .btns.servicePage .joinNow {
+  display: none;
+}
+.navbar .rightNav .btns.servicePage .freeClass {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%) !important;
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%) !important;
+}
+.navbar .rightNav .menus {
+  margin-top: 20px;
+}
+.navbar .rightNav .menus ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+.navbar .rightNav .menus ul li {
+  position: relative;
+}
+.navbar .rightNav .menus ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 18px;
+}
+.navbar .rightNav .menus ul li.active::after {
+  content: "";
+  width: 48px;
+  height: 5px;
+  bottom: -12px;
+  left: 0;
+  transform: skew(-40deg);
+  position: absolute;
+  background-color: #038d9f;
+}
+
+.mobileNavbar {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+  .mobileNavbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #222222;
+  }
+  .mobileNavbar .topNavbar {
+    padding: 20px 0;
+  }
+  .mobileNavbar .topNavbar img {
+    height: 100px;
+  }
+  .mobileNavbar .bottomNavbar {
+    padding-bottom: 20px;
+  }
+  .mobileNavbar .bottomNavbar .navBtn {
+    padding: 15px 45px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .mobileNavbar .bottomNavbar .navBtn.joinNow {
+    padding: 13px 33px;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 85.5% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, 85.5% 100%, 0% 100%);
+    background: #ffffff;
+    color: #038d9f;
+  }
+  .mobileNavbar .bottomNavbar .navBtn.freeClass {
+    padding: 13px 30px;
+    -webkit-clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+    margin-left: -23.5px;
+    background: #038d9f;
+    color: #ffffff;
+  }
+  .mobileNavbar .bottomNavbar.servicePageMobile .joinNow {
+    display: none;
+  }
+  .mobileNavbar .bottomNavbar.servicePageMobile .freeClass {
+    padding: 15px 55px;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    margin-left: 0;
+  }
+  .mobileNavbar .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+  }
+  .mobileNavbar .hamburger .line {
+    width: 35px;
+    height: 3px;
+    background: white;
+    margin: 4.5px 0;
+    transform-origin: left;
+    transition: all 1.5s ease;
+  }
+  .mobileNavbar .hamburger.active .line2 {
+    opacity: 0;
+  }
+  .mobileNavbar .hamburger.active .line1 {
+    transform: rotate(45deg);
+  }
+  .mobileNavbar .hamburger.active .line3 {
+    transform: rotate(-45deg);
+  }
+  .mobileNavbar .mobileMenu {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #222222;
+    width: 100%;
+    height: 100vh;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 1s ease;
+  }
+  .mobileNavbar .mobileMenu.activeMenu {
+    transform: scaleY(1);
+  }
+  .mobileNavbar .mobileMenu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #038d9f;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    gap: 20px;
+  }
+  .mobileNavbar .mobileMenu ul li {
+    text-align: center;
+  }
+  .mobileNavbar .mobileMenu ul li a {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    font-weight: 500;
+  }
+  .mobileNavbar .mobileMenu .menuBottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    color: white;
+  }
+  .mobileNavbar .mobileMenu .menuBottom .menuSlogan {
+    text-align: center;
+    font-size: 20px;
+  }
+  .mobileNavbar .mobileMenu .menuBottom .shortLinks {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .mobileNavbar .mobileMenu .menuBottom .shortLinks ion-icon {
+    font-size: 30px;
+    color: #038d9f;
+  }
+  .mobileNavbar .mobileMenu .menuBottom .emailId {
+    font-size: 20px;
+    text-align: center;
+  }
+  .mobileNavbar .mobileMenu .menuBottom .emailId span {
+    font-size: 22px;
+    font-weight: 500;
+  }
+}
+.homeHeader {
+  background-color: #222222;
+  height: calc(100vh - 130px);
+  max-height: 60vw;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.homeHeader .left {
+  background: white;
+  height: 100%;
+  width: 55%;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 40% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 40% 100%, 0% 100%);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.homeHeader .left::after {
+  content: "";
+  font-size: 40px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.55;
+  z-index: 4;
+}
+.homeHeader .left img {
+  height: calc(100vh - 130px);
+  width: 100%;
+  -o-object-position: 0 0;
+     object-position: 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.homeHeader .right {
+  width: 45%;
+  height: 100%;
+  background-color: #222222;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.homeHeader .right .slogan {
+  color: #ffffff;
+  margin-right: 100px;
+  margin-left: 50px;
+  margin-top: 14vh;
+  text-align: left;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.homeHeader .right .desc {
+  color: white;
+  margin-right: 150px;
+  margin-left: 50px;
+  margin-top: 30px;
+  font-size: 20px;
+  text-align: left;
+}
+.homeHeader .right .learnmore {
+  align-self: flex-start;
+  margin-left: 50px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #038d9f;
+  color: #ffffff;
+  border: none;
+  padding: 13px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.homeHeader .right .learnmore ion-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.homeHeader .backgroundFonts {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.homeHeader .backgroundFonts img {
+  width: auto;
+  height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .homeHeader {
+    background-color: #222222;
+    height: auto;
+    max-height: unset;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .homeHeader .left {
+    height: 100vw;
+    width: 100%;
+    -webkit-clip-path: none;
+            clip-path: none;
+    background-repeat: no-repeat;
+  }
+  .homeHeader .left img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .homeHeader .right {
+    width: 100%;
+    background-color: #222222;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 20px 10px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  .homeHeader .right .slogan {
+    color: #ffffff;
+    padding: 0 5px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .homeHeader .right .desc {
+    color: white;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 10px;
+    padding: 0 5px;
+    font-size: 17px;
+    text-align: center;
+  }
+  .homeHeader .right .learnmore {
+    align-self: center;
+    margin-left: 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #038d9f;
+    color: #ffffff;
+    border: none;
+    padding: 13px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+            clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  }
+  .homeHeader .right .learnmore ion-icon {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+  .homeHeader .backgroundFonts {
+    display: none;
+    position: relative;
+    bottom: 30px;
+  }
+  .homeHeader .backgroundFonts img {
+    width: 100%;
+  }
+}
+.whoAreWe {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 100px 0;
+  background-color: #222222;
+  color: white;
+  display: flex;
+  position: relative;
+}
+.whoAreWe .left {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.whoAreWe .left .imgbox {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-right: 70px;
+}
+.whoAreWe .left .imgbox img {
+  height: 550px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.whoAreWe .right {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.whoAreWe .right .title {
+  font-size: 50px;
+  margin-right: 100px;
+  margin-left: 50px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+}
+.whoAreWe .right .title::before {
+  content: "";
+  width: 48px;
+  height: 5px;
+  top: -12px;
+  left: 0;
+  transform: skew(-40deg);
+  position: absolute;
+  background-color: #038d9f;
+}
+.whoAreWe .right .desc {
+  margin-left: 50px;
+  margin-right: 100px;
+  text-align: justify;
+  line-height: 22px;
+  font-size: 18px;
+}
+.whoAreWe .right .desc p {
+  margin-top: 20px;
+}
+.whoAreWe .right .learnmore {
+  align-self: flex-start;
+  margin-left: 50px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #038d9f;
+  color: #ffffff;
+  border: none;
+  padding: 13px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.whoAreWe .right .learnmore ion-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.whoAreWe .whoareweBgFontMobile {
+  display: none;
+}
+.whoAreWe .whoareweBgFont {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 80px;
+}
+.whoAreWe .whoareweBgFont img {
+  height: 550px;
+}
+
+@media screen and (max-width: 768px) {
+  .whoAreWe {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 0;
+    background-color: #222222;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .whoAreWe .left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: flex-end;
+  }
+  .whoAreWe .left .imgbox {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-right: 0;
+  }
+  .whoAreWe .left .imgbox img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .whoAreWe .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 10px;
+  }
+  .whoAreWe .right .title {
+    font-size: 30px;
+    margin-right: 0;
+    margin-left: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+  }
+  .whoAreWe .right .title::before {
+    content: "";
+    width: 48px;
+    height: 5px;
+    top: -12px;
+    left: 50%;
+    transform: skew(-40deg) translateX(-50%);
+    position: absolute;
+    background-color: #038d9f;
+  }
+  .whoAreWe .right .desc {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    line-height: 22px;
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  .whoAreWe .right .desc p {
+    margin-top: 20px;
+  }
+  .whoAreWe .right .learnmore {
+    align-self: center;
+    margin-left: 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #038d9f;
+    color: #ffffff;
+    border: none;
+    padding: 13px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+            clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  }
+  .whoAreWe .right .learnmore ion-icon {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+  .whoAreWe .whoareweBgFont {
+    display: none;
+  }
+  .whoAreWe .whoareweBgFontMobile {
+    display: block;
+    margin: 10px 0;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .whoAreWe .whoareweBgFontMobile img {
+    height: 40px;
+  }
+}
+.highLight {
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow-x: hidden !important;
+  width: 100%;
+  background-color: #222222;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-bottom: 50px;
+}
+.highLight .container {
+  height: 550px;
+  width: 100%;
+  background-size: cover;
+  background-image: url("../Assets/highlight.png");
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../Assets/highlight.png");
+  -webkit-clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+          clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+.highLight .container .line {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  width: 2px;
+  top: 0;
+  left: 0;
+  transform: rotate(15deg);
+}
+.highLight .container .line.line1 {
+  left: 20%;
+}
+.highLight .container .line.line2 {
+  left: 50%;
+}
+.highLight .container .line.line3 {
+  left: 80%;
+}
+.highLight .container .details {
+  display: flex;
+  gap: 200px;
+}
+.highLight .container .details .detailItem {
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.highLight .container .details .detailItem h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.highLight .container .details .detailItem h3 {
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .highLight {
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow-x: hidden !important;
+    width: 100% auto;
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .highLight .container {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../Assets/highlight.png");
+    background-repeat: no-repeat;
+    -webkit-clip-path: none;
+            clip-path: none;
+    display: flex;
+    justify-content: center;
+    color: white;
+  }
+  .highLight .container .line {
+    height: 87%;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    width: 2px;
+    top: 0;
+    left: 0;
+    transform: rotate(15deg);
+  }
+  .highLight .container .line.line1 {
+    left: 10%;
+  }
+  .highLight .container .line.line2 {
+    left: 47%;
+  }
+  .highLight .container .line.line3 {
+    left: 85%;
+  }
+  .highLight .container .details {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    padding: 40px 10px;
+  }
+  .highLight .container .details .detailItem {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .highLight .container .details .detailItem h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .highLight .container .details .detailItem h3 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+  }
+}
+.ourCourses {
+  background-color: #222222;
+  color: white;
+  min-height: 100vh;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.ourCourses .title {
+  margin: 0;
+  font-size: 50px;
+  margin-right: 100px;
+  margin-left: 100px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+}
+.ourCourses .title::before {
+  content: "";
+  width: 48px;
+  height: 5px;
+  top: -12px;
+  left: 0;
+  transform: skew(-40deg);
+  position: absolute;
+  background-color: #038d9f;
+}
+.ourCourses .cardContainer {
+  margin-top: 50px;
+  padding: 20px 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+.ourCourses .cardContainer .card {
+  height: 200px;
+  width: auto;
+  width: 400px;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #038d9f;
+  font-weight: 500;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: -10px -10px 20px 3px rgba(82, 82, 82, 0.3), 10px 10px 20px 10px #161818;
+  transition: box-shadow 0.8s ease;
+  cursor: pointer;
+}
+.ourCourses .cardContainer .card:hover {
+  box-shadow: 10px 10px 20px 3px rgba(82, 82, 82, 0.3), -10px -10px 20px 10px #161818;
+}
+.ourCourses .cardContainer .card img {
+  height: 80px;
+}
+.ourCourses .cardContainer .card .courseTitle {
+  font-size: 20px;
+}
+.ourCourses .backgroundFont {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  right: 100px;
+  top: 25px;
+}
+.ourCourses .backgroundFont img {
+  width: 75%;
+}
+
+@media screen and (max-width: 768px) {
+  .ourCourses {
+    background-color: #222222;
+    color: white;
+    min-height: 100vh;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .ourCourses .title {
+    margin: 0;
+    font-size: 28px;
+    margin-right: 0;
+    margin-left: 0;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+  }
+  .ourCourses .title::before {
+    content: "";
+    width: 48px;
+    height: 5px;
+    top: -12px;
+    left: 50%;
+    transform: skew(-40deg) translateX(-50%);
+    position: absolute;
+    background-color: #038d9f;
+  }
+  .ourCourses .cardContainer {
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+  }
+  .ourCourses .cardContainer .card {
+    height: 40vw;
+    width: auto;
+    width: 85%;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #038d9f;
+    font-weight: 500;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: -10px -10px 20px 3px rgba(82, 82, 82, 0.3), 10px 10px 20px 10px #161818;
+    transition: box-shadow 0.8s ease;
+    cursor: pointer;
+  }
+  .ourCourses .cardContainer .card:hover {
+    box-shadow: 10px 10px 20px 3px rgba(82, 82, 82, 0.3), -10px -10px 20px 10px #161818;
+  }
+  .ourCourses .cardContainer .card img {
+    height: 60px;
+  }
+  .ourCourses .cardContainer .card .courseTitle {
+    font-size: 20px;
+  }
+  .ourCourses .backgroundFont {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    right: 100px;
+    top: 25px;
+    display: none;
+  }
+  .ourCourses .backgroundFont img {
+    width: 75%;
+  }
+}
+.testimonials {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  background-color: #222222;
+  color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+}
+.testimonials .title {
+  margin: 0;
+  font-size: 50px;
+  margin-right: 100px;
+  margin-left: 100px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+}
+.testimonials .title::before {
+  content: "";
+  width: 48px;
+  height: 5px;
+  top: -12px;
+  left: 0;
+  transform: skew(-40deg);
+  position: absolute;
+  background-color: #038d9f;
+}
+.testimonials .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.testimonials .container .slider {
+  width: 1300px;
+  height: 450px;
+  display: flex;
+  overflow: hidden;
+  justify-content: flex-start;
+}
+.testimonials .container .slider .allSlides {
+  display: flex;
+  transition: all 0.7s ease;
+}
+.testimonials .container .slider .allSlides .slide {
+  font-size: 200px;
+  width: 1300px;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+}
+.testimonials .container .slider .allSlides .slide .left {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+.testimonials .container .slider .allSlides .slide .left img {
+  width: 70%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.testimonials .container .slider .allSlides .slide .right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px 0;
+  padding-right: 50px;
+  padding-left: 50px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.testimonials .container .slider .allSlides .slide .right .desc {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.testimonials .container .slider .allSlides .slide .right .username {
+  font-size: 28px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.testimonials .container .slider .allSlides .slide .right .viewClass {
+  color: #038d9f;
+  font-size: 22px;
+  margin-top: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.testimonials .container .slider .allSlides .slide .right .viewClass ion-icon {
+  margin-left: 10px;
+  font-size: 20px;
+}
+.testimonials .container .slider .allSlides.active0 {
+  transform: translateX(0);
+}
+.testimonials .container .slider .allSlides.active1 {
+  transform: translateX(-1300px);
+}
+.testimonials .container .slider .allSlides.active2 {
+  transform: translateX(-2600px);
+}
+.testimonials .container .slider .allSlides.active3 {
+  transform: translateX(-3900px);
+}
+.testimonials .container .slider .allSlides.active4 {
+  transform: translateX(-5200px);
+}
+.testimonials .container .slider .allSlides.active5 {
+  transform: translateX(-6500px);
+}
+.testimonials .container .slider .allSlides.active6 {
+  transform: translateX(-7800px);
+}
+.testimonials .container .slideController {
+  display: flex;
+}
+.testimonials .container .slideController .dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #038d9f;
+  margin: 10px 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.testimonials .container .slideController .active {
+  width: 30px;
+  border-radius: 30px;
+}
+.testimonials .backgroundFont {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  right: 50px;
+  top: 25px;
+}
+.testimonials .backgroundFont img {
+  width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+  .testimonials {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    background-color: #222222;
+    color: #ffffff;
+    padding: 20px 10px;
+    padding-top: 70px;
+    position: relative;
+  }
+  .testimonials .title {
+    margin: 0;
+    font-size: 28px;
+    margin-right: 0;
+    margin-left: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+  }
+  .testimonials .title::before {
+    content: "";
+    width: 48px;
+    height: 5px;
+    top: -12px;
+    left: 50%;
+    transform: skew(-40deg) translateX(-50%);
+    position: absolute;
+    background-color: #038d9f;
+  }
+  .testimonials .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .testimonials .container .slider {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    overflow: hidden;
+    justify-content: flex-start;
+  }
+  .testimonials .container .slider .allSlides {
+    display: flex;
+    gap: 5vw;
+    justify-content: center;
+    transition: all 0.7s ease;
+  }
+  .testimonials .container .slider .allSlides .slide {
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+  }
+  .testimonials .container .slider .allSlides .slide .left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .testimonials .container .slider .allSlides .slide .left img {
+    width: 80%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+            clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  }
+  .testimonials .container .slider .allSlides .slide .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+    margin: 0;
+  }
+  .testimonials .container .slider .allSlides .slide .right .desc {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .testimonials .container .slider .allSlides .slide .right .username {
+    font-size: 26px;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .testimonials .container .slider .allSlides .slide .right .viewClass {
+    color: #038d9f;
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+  .testimonials .container .slider .allSlides .slide .right .viewClass ion-icon {
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  .testimonials .container .slider .allSlides.active0 {
+    transform: translateX(0);
+  }
+  .testimonials .container .slider .allSlides.active1 {
+    transform: translateX(-100vw);
+  }
+  .testimonials .container .slider .allSlides.active2 {
+    transform: translateX(-200vw);
+  }
+  .testimonials .container .slider .allSlides.active3 {
+    transform: translateX(-300vw);
+  }
+  .testimonials .container .slider .allSlides.active4 {
+    transform: translateX(-400vw);
+  }
+  .testimonials .container .slider .allSlides.active5 {
+    transform: translateX(-500vw);
+  }
+  .testimonials .container .slider .allSlides.active6 {
+    transform: translateX(-600vw);
+  }
+  .testimonials .container .slideController {
+    display: flex;
+  }
+  .testimonials .container .slideController .dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #038d9f;
+    margin: 10px 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  .testimonials .container .slideController .active {
+    width: 30px;
+    border-radius: 30px;
+  }
+  .testimonials .backgroundFont {
+    position: static;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .testimonials .backgroundFont img {
+    width: 100%;
+  }
+}
+.subscribe {
+  background-color: #222222;
+  width: 100%;
+  padding: 30px 100px;
+  color: white;
+  display: flex;
+}
+.subscribe .left {
+  width: 60%;
+}
+.subscribe .left p {
+  font-size: 34px;
+  font-weight: 500;
+  width: 80%;
+}
+.subscribe .right {
+  width: 40%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+}
+.subscribe .right .container {
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  height: 57px;
+  padding-left: 10px;
+}
+.subscribe .right .container ion-icon {
+  height: 45px;
+  width: 45px;
+  color: #038d9f;
+}
+.subscribe .right .container input {
+  background-color: #222222;
+  outline: none;
+  border: none;
+  padding: 10px;
+  width: 350px;
+  color: white;
+  font-size: 18px;
+}
+.subscribe .right .container input::-moz-placeholder {
+  color: rgb(178, 178, 178);
+  text-transform: uppercase;
+}
+.subscribe .right .container input::placeholder {
+  color: rgb(178, 178, 178);
+  text-transform: uppercase;
+}
+.subscribe .right .container button {
+  padding: 5px;
+  height: 56px;
+  width: 90px;
+  cursor: pointer;
+  background-color: #038d9f;
+  color: white;
+  border: none;
+  font-weight: 500;
+  font-size: 18px;
+}
+.subscribe .right .container button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 768px) {
+  .subscribe {
+    background-color: #222222;
+    width: 100%;
+    padding: 30px 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  .subscribe .left {
+    width: 100%;
+  }
+  .subscribe .left p {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+  }
+  .subscribe .right {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .subscribe .right .container {
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    height: 50px;
+  }
+  .subscribe .right .container input {
+    background-color: #222222;
+    outline: none;
+    border: none;
+    padding: 10px;
+    width: auto;
+    color: white;
+    font-size: 16px;
+  }
+  .subscribe .right .container input::-moz-placeholder {
+    color: rgb(178, 178, 178);
+    text-transform: uppercase;
+  }
+  .subscribe .right .container input::placeholder {
+    color: rgb(178, 178, 178);
+    text-transform: uppercase;
+  }
+  .subscribe .right .container button {
+    padding: 10px;
+    height: 100%;
+    width: -moz-fit-content;
+    width: fit-content;
+    cursor: pointer;
+    background-color: #038d9f;
+    color: white;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+  }
+}
+.footerContainer {
+  background-color: #222222;
+  padding-top: 20px;
+}
+.footerContainer hr {
+  margin: 0 100px;
+  opacity: 0.5;
+}
+.footerContainer .footer {
+  display: flex;
+  align-items: center;
+  padding: 0px 100px;
+  padding-top: 20px;
+  height: 260px;
+  color: white;
+}
+.footerContainer .footer .left,
+.footerContainer .footer .center,
+.footerContainer .footer .right {
+  width: 33.3333333333%;
+  height: 100%;
+}
+.footerContainer .footer .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footerContainer .footer .left img {
+  height: 200px;
+}
+.footerContainer .footer .center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+}
+.footerContainer .footer .center ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footerContainer .footer .center ul li {
+  text-align: center;
+}
+.footerContainer .footer .center ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  font-size: 18px;
+}
+.footerContainer .footer .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 100px;
+}
+.footerContainer .footer .right p {
+  font-size: 20px;
+  font-weight: 500;
+}
+.footerContainer .footer .right p span {
+  font-weight: 300;
+}
+.footerContainer .footer .right .socialIcons {
+  display: flex;
+  gap: 30px;
+}
+.footerContainer .footer .right .socialIcons a {
+  font-size: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  border-radius: 50%;
+}
+.footerContainer .footer .right .branding {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .footerContainer {
+    background-color: #222222;
+    padding-top: 20px;
+  }
+  .footerContainer hr {
+    margin: 0;
+    opacity: 0.5;
+  }
+  .footerContainer .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    padding-top: 20px;
+    height: -moz-fit-content;
+    height: fit-content;
+    color: white;
+  }
+  .footerContainer .footer .left,
+  .footerContainer .footer .center,
+  .footerContainer .footer .right {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .footerContainer .footer .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+  .footerContainer .footer .left img {
+    height: 150px;
+  }
+  .footerContainer .footer .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    width: 100%;
+  }
+  .footerContainer .footer .center ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+  .footerContainer .footer .center ul li {
+    text-align: center;
+  }
+  .footerContainer .footer .center ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    font-size: 18px;
+  }
+  .footerContainer .footer .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-left: 0;
+    padding-bottom: 20px;
+  }
+  .footerContainer .footer .right p {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+  }
+  .footerContainer .footer .right p span {
+    font-weight: 300;
+  }
+  .footerContainer .footer .right .socialIcons {
+    display: flex;
+    gap: 20px;
+  }
+  .footerContainer .footer .right .socialIcons a {
+    font-size: 25px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border-radius: 50%;
+  }
+  .footerContainer .footer .right .branding {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+  }
+}
+.whyChoose {
+  background-color: #222222;
+  color: white;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.whyChoose .title {
+  margin: 0;
+  font-size: 50px;
+  margin-right: 100px;
+  margin-left: 100px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+}
+.whyChoose .title::before {
+  content: "";
+  width: 48px;
+  height: 5px;
+  top: -12px;
+  left: 0;
+  transform: skew(-40deg);
+  position: absolute;
+  background-color: #038d9f;
+}
+.whyChoose .cardContainer {
+  margin-top: 70px;
+  padding: 20px 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.whyChoose .cardContainer .card {
+  height: 260px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-weight: 500;
+  gap: 15px;
+  border-radius: 10px;
+  box-shadow: -10px -10px 20px 3px rgba(82, 82, 82, 0.3), 10px 10px 20px 10px #161818;
+  transition: box-shadow 0.8s ease;
+  cursor: pointer;
+}
+.whyChoose .cardContainer .card:hover {
+  box-shadow: 10px 10px 20px 3px rgba(82, 82, 82, 0.3), -10px -10px 20px 10px #161818;
+}
+.whyChoose .cardContainer .card .cardTitle {
+  font-size: 20px;
+}
+.whyChoose .cardContainer .card img {
+  height: 75px;
+}
+.whyChoose .cardContainer .card .courseTitle {
+  font-size: 15px;
+  text-align: center;
+  width: 250px;
+  font-weight: 300;
+}
+.whyChoose .backgroundFont {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  right: 100px;
+  top: 35px;
+}
+.whyChoose .backgroundFont img {
+  width: 75%;
+}
+
+@media screen and (max-width: 768px) {
+  .whyChoose {
+    background-color: #222222;
+    color: white;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .whyChoose .title {
+    margin: 0;
+    font-size: 28px;
+    margin-right: 0;
+    margin-left: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+  }
+  .whyChoose .title::before {
+    content: "";
+    width: 48px;
+    height: 5px;
+    top: -12px;
+    left: 50%;
+    transform: skew(-40deg) translateX(-50%);
+    position: absolute;
+    background-color: #038d9f;
+  }
+  .whyChoose .cardContainer {
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  .whyChoose .cardContainer .card {
+    height: 260px;
+    width: 300px;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-weight: 500;
+    gap: 15px;
+    border-radius: 10px;
+    box-shadow: -10px -10px 20px 3px rgba(82, 82, 82, 0.3), 10px 10px 20px 10px #161818;
+    transition: box-shadow 0.8s ease;
+    cursor: pointer;
+  }
+  .whyChoose .cardContainer .card:hover {
+    box-shadow: 10px 10px 20px 3px rgba(82, 82, 82, 0.3), -10px -10px 20px 10px #161818;
+  }
+  .whyChoose .cardContainer .card .cardTitle {
+    font-size: 20px;
+  }
+  .whyChoose .cardContainer .card img {
+    height: 75px;
+  }
+  .whyChoose .cardContainer .card .courseTitle {
+    font-size: 15px;
+    text-align: center;
+    width: 250px;
+    font-weight: 300;
+  }
+  .whyChoose .backgroundFont {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    right: 100px;
+    top: 35px;
+  }
+  .whyChoose .backgroundFont img {
+    width: 75%;
+  }
+}
+.trainers {
+  display: flex;
+  flex-direction: column;
+  background-color: #222222;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-top: 80px;
+  width: 100%;
+}
+.trainers .title {
+  margin: 0;
+  font-size: 50px;
+  margin-right: 100px;
+  margin-left: 100px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  color: white;
+}
+.trainers .title::before {
+  content: "";
+  width: 48px;
+  height: 5px;
+  top: -12px;
+  left: 0;
+  transform: skew(-40deg);
+  position: absolute;
+  background-color: #038d9f;
+}
+.trainers .trainerDetail {
+  width: 100%;
+  color: white;
+  display: flex;
+  position: relative;
+  padding: 50px 0;
+}
+.trainers .trainerDetail .left {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.trainers .trainerDetail .left .imgbox {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-right: 70px;
+}
+.trainers .trainerDetail .left .imgbox img {
+  border-radius: 10px;
+  height: 500px;
+}
+.trainers .trainerDetail .right {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.trainers .trainerDetail .right .title {
+  font-size: 30px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+}
+.trainers .trainerDetail .right .title::before {
+  content: "";
+  width: 48px;
+  height: 5px;
+  top: -12px;
+  left: 0;
+  transform: skew(-40deg);
+  position: absolute;
+  background-color: #038d9f;
+}
+.trainers .trainerDetail .right .desc {
+  margin-left: 30px;
+  margin-right: 100px;
+  text-align: left;
+  line-height: 22px;
+  font-size: 18px;
+}
+.trainers .trainerDetail .right .desc p {
+  margin-bottom: 40px;
+}
+.trainers .trainerDetail .right .learnmore {
+  align-self: flex-start;
+  margin-left: 30px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #038d9f;
+  color: #ffffff;
+  border: none;
+  padding: 13px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.trainers .trainerDetail .right .learnmore ion-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.trainers .trainerDetail .personalTrainerFont {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 100px;
+}
+.trainers .trainerDetail .personalTrainerFont img {
+  width: 70%;
+}
+.trainers .trainerDetail .personalTrainerFont.cmo img {
+  width: 70%;
+}
+.trainers .trainerDetail:nth-child(2n+1) {
+  flex-direction: row-reverse;
+  position: relative;
+}
+.trainers .trainerDetail:nth-child(2n+1) .left {
+  justify-content: flex-start;
+}
+.trainers .trainerDetail:nth-child(2n+1) .left .imgbox {
+  margin-right: 100px;
+}
+.trainers .trainerDetail:nth-child(2n+1) .right {
+  margin-right: 30px;
+  margin-left: 100px;
+}
+.trainers .trainerDetail:nth-child(2n+1) .personalTrainerFont {
+  position: absolute;
+  top: 50%;
+  width: -moz-fit-content;
+  width: fit-content;
+  transform: translateY(-50%);
+  left: auto;
+  right: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .trainers {
+    display: flex;
+    flex-direction: column;
+    background-color: #222222;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 10px;
+    width: 100%;
+  }
+  .trainers .title {
+    margin: 0;
+    font-size: 28px;
+    margin-right: 0;
+    margin-left: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    color: white;
+  }
+  .trainers .title::before {
+    content: "";
+    width: 48px;
+    height: 5px;
+    top: -12px;
+    left: 50%;
+    transform: skew(-40deg) translateX(-50%);
+    position: absolute;
+    background-color: #038d9f;
+  }
+  .trainers .trainerDetail {
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 10px;
+    padding-top: 0px;
+  }
+  .trainers .trainerDetail .left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 30px;
+  }
+  .trainers .trainerDetail .left .imgbox {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-right: 0;
+  }
+  .trainers .trainerDetail .left .imgbox img {
+    height: auto;
+    width: 100%;
+  }
+  .trainers .trainerDetail .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .trainers .trainerDetail .right .title {
+    font-size: 22px;
+    margin-left: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+  }
+  .trainers .trainerDetail .right .title::before {
+    content: "";
+    width: 48px;
+    height: 5px;
+    top: -12px;
+    left: 50%;
+    transform: skew(-40deg) translateX(-50%);
+    position: absolute;
+    background-color: #038d9f;
+  }
+  .trainers .trainerDetail .right .desc {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: justify;
+    line-height: 22px;
+    font-size: 16px;
+  }
+  .trainers .trainerDetail .right .desc p {
+    margin-bottom: 10px;
+  }
+  .trainers .trainerDetail .right .learnmore {
+    align-self: center;
+    margin-left: 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #038d9f;
+    color: #ffffff;
+    border: none;
+    padding: 13px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+            clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  }
+  .trainers .trainerDetail .right .learnmore ion-icon {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+  .trainers .trainerDetail .personalTrainerFont {
+    display: none;
+  }
+  .trainers .trainerDetail .personalTrainerMobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .trainers .trainerDetail .personalTrainerMobile img {
+    width: 100%;
+  }
+  .trainers .trainerDetail:nth-child(2n+1) {
+    flex-direction: column;
+    position: relative;
+  }
+  .trainers .trainerDetail:nth-child(2n+1) .left {
+    justify-content: flex-start;
+  }
+  .trainers .trainerDetail:nth-child(2n+1) .left .imgbox {
+    margin-right: 0;
+  }
+  .trainers .trainerDetail:nth-child(2n+1) .right {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .trainers .trainerDetail:nth-child(2n+1) .personalTrainerFont {
+    display: none;
+  }
+}
+.quiz {
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 130px);
+  width: 100%;
+  padding-bottom: 130px;
+  position: relative;
+  color: white;
+}
+.quiz .popUpLayer {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quiz .popUpLayer .popUpBox {
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 450px;
+  color: black;
+}
+.quiz .popUpLayer .popUpBox ion-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.quiz .popUpLayer .popUpBox .popuptitle {
+  font-size: 25px;
+  margin-bottom: 0;
+  color: black;
+}
+.quiz .popUpLayer .popUpBox .popupsubtitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-align: center;
+  margin-top: 10px;
+}
+.quiz .popUpLayer .popUpBox .desc {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.quiz .popUpLayer .popUpBox form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 10px;
+  width: 350px;
+}
+.quiz .popUpLayer .popUpBox form label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+.quiz .popUpLayer .popUpBox form label span {
+  color: red;
+  font-size: 16px;
+}
+.quiz .popUpLayer .popUpBox form input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: black;
+  background: rgba(3, 141, 159, 0.3);
+  border: none;
+}
+.quiz .popUpLayer .popUpBox form input:-webkit-autofill,
+.quiz .popUpLayer .popUpBox form input:-webkit-autofill:hover,
+.quiz .popUpLayer .popUpBox form input:-webkit-autofill:focus,
+.quiz .popUpLayer .popUpBox form input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgba(3, 141, 159, 0.3) inset !important;
+}
+.quiz .popUpLayer .popUpBox form input:-webkit-autofill {
+  -webkit-text-fill-color: black !important;
+}
+.quiz .popUpLayer .popUpBox form .msg {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.8);
+  margin-top: 20px;
+}
+.quiz .popUpLayer .popUpBox form .errMsg {
+  font-size: 12px;
+  color: red;
+  margin-top: 20px;
+  align-self: center;
+}
+.quiz .popUpLayer .popUpBox button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #038d9f;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  margin-top: 25px;
+  font-size: 16px;
+  align-self: center;
+}
+.quiz .title {
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.quiz .slogan {
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.quiz .learnmore {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #038d9f;
+  color: #ffffff;
+  border: none;
+  padding: 15px 50px;
+  font-size: 18px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.quiz .learnmore ion-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.quiz .questionBox {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.quiz .questionBox .question {
+  font-size: 32px;
+  font-weight: 300;
+}
+.quiz .questionBox .suggestion {
+  font-size: 25px;
+  font-weight: 300;
+  margin-top: 5px;
+}
+.quiz .questionBox .checks {
+  margin-top: 20px;
+  flex-direction: column;
+}
+.quiz .questionBox .checks > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.quiz .questionBox .checks > div input {
+  display: none;
+}
+.quiz .questionBox .checks > div input[type=radio]:checked + .box::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 15px;
+  width: 15px;
+  border-radius: 3px;
+  background-color: #038d9f;
+}
+.quiz .questionBox .checks > div .box {
+  height: 22px;
+  width: 22px;
+  background-color: #222222;
+  border: 2px solid #038d9f;
+  margin-right: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+.quiz .questionBox .checks > div label {
+  cursor: pointer;
+}
+.quiz .questionBox .checks > div .text {
+  font-size: 22px;
+  cursor: pointer;
+}
+.quiz .questionBox .btn {
+  background-color: #038d9f;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  outline: none;
+  border: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1;
+}
+.quiz .questionBox .btn ion-icon {
+  margin-left: 5px;
+}
+.quiz .preNextBtns {
+  position: absolute;
+  bottom: 100px;
+  right: 300px;
+  display: flex;
+  gap: 5px;
+}
+.quiz .preNextBtns button {
+  background-color: #038d9f;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quiz .preNextBtns button ion-icon {
+  font-size: 20px;
+  font-weight: 100;
+}
+.quiz .preNextBtns button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 768px) {
+  .quiz {
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    padding: 0 10px;
+    padding-bottom: 0;
+    position: relative;
+    color: white;
+  }
+  .quiz .title {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 60px;
+  }
+  .quiz .slogan {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+  }
+  .quiz .learnmore {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #038d9f;
+    color: #ffffff;
+    border: none;
+    padding: 13px 40px;
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+            clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  }
+  .quiz .learnmore ion-icon {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+  .quiz .questionBox {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .quiz .questionBox.activeQueBox {
+    height: calc(100vh - 190px);
+  }
+  .quiz .questionBox .question {
+    font-size: 25px;
+    font-weight: 300;
+    text-align: center;
+    width: 80%;
+  }
+  .quiz .questionBox .suggestion {
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 5px;
+    text-align: center;
+  }
+  .quiz .questionBox .checks {
+    margin-top: 10px;
+    align-self: center;
+    flex-direction: column;
+  }
+  .quiz .questionBox .checks > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .quiz .questionBox .checks > div input {
+    display: none;
+  }
+  .quiz .questionBox .checks > div input[type=radio]:checked + .box::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 12px;
+    width: 12px;
+    border-radius: 3px;
+    background-color: #038d9f;
+  }
+  .quiz .questionBox .checks > div .box {
+    height: 20px;
+    width: 20px;
+    background-color: #222222;
+    border: 2px solid #038d9f;
+    margin-right: 10px;
+    border-radius: 3px;
+    position: relative;
+  }
+  .quiz .questionBox .checks > div label {
+    cursor: pointer;
+  }
+  .quiz .questionBox .checks > div .text {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .quiz .questionBox .dropDown {
+    width: 80vw;
+    position: relative;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  .quiz .questionBox .dropDown .dropDown-Btn {
+    padding: 15px 20px;
+    background: #2b2c33;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  .quiz .questionBox .dropDown .dropDown-content {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    padding: 10px;
+    background: #2b2c33;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+    font-weight: 300;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+  }
+  .quiz .questionBox .dropDown .dropDown-content .dropDown-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .quiz .questionBox .dropDown .dropDown-content .dropDown-item:hover {
+    background-color: #222222;
+  }
+  .quiz .questionBox .btn {
+    background-color: #038d9f;
+    align-self: center;
+    padding: 12px 30px;
+    color: white;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+            clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  }
+  .quiz .preNextBtns {
+    display: none;
+  }
+}
+.allplans {
+  width: 100%;
+  background-color: #222222;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: white;
+}
+.allplans .searchBar {
+  padding: 0 100px;
+}
+.allplans .searchBar .field {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+}
+.allplans .searchBar .field ion-icon {
+  font-size: 25px;
+  color: gray;
+  padding: 10px;
+}
+.allplans .searchBar .field input {
+  padding: 10px;
+  width: 100%;
+  border: none;
+}
+
+.courseContainer {
+  width: 100%;
+  background-color: #222222;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: white;
+  position: relative;
+  padding: 50px 100px;
+}
+.courseContainer .title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+}
+.courseContainer .title::before {
+  content: "";
+  width: 48px;
+  height: 5px;
+  top: -12px;
+  left: 0;
+  transform: skew(-40deg);
+  position: absolute;
+  background-color: #038d9f;
+}
+.courseContainer .courseHighlight {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.courseContainer .courseHighlight .subHighlight {
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 10px;
+}
+.courseContainer .courseContent {
+  display: flex;
+  gap: 20px;
+}
+.courseContainer .courseContent .left {
+  width: 50%;
+}
+.courseContainer .courseContent .left .description p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.courseContainer .courseContent .left .description ul li {
+  margin-left: 20px;
+}
+.courseContainer .courseContent .right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.courseContainer .courseContent .right .image {
+  margin-right: 50px;
+}
+.courseContainer .courseContent .right .image img {
+  height: 450px;
+}
+.courseContainer .courseContent .right .priceContainer {
+  border: 2px solid #038d9f;
+  padding: 10px 100px;
+  align-self: center;
+  margin-top: 20px;
+  background-color: #038d9f;
+  border-radius: 5px;
+}
+.courseContainer .batchDetails {
+  margin-top: 10px;
+}
+.courseContainer .batchDetails .batchTitle {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.courseContainer .batchDetails .batchContainer {
+  display: flex;
+  width: 95%;
+  flex-wrap: wrap;
+  -moz-column-gap: 200px;
+       column-gap: 200px;
+  row-gap: 20px;
+}
+.courseContainer .batchDetails .batchContainer .singleBatch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+}
+.courseContainer .batchDetails .batchContainer .singleBatch p {
+  width: 250px;
+}
+.courseContainer .batchDetails .batchContainer .singleBatch button {
+  width: 150px;
+  background: #038d9f;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid #038d9f;
+  transition: all 0.5s ease;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.courseContainer .batchDetails .batchContainer .singleBatch button.closed {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.courseContainer .backgroundFont {
+  display: flex;
+  right: 100px;
+  top: 20px;
+  margin: 10px 0;
+}
+.courseContainer .backgroundFont img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .allplans {
+    padding: 10px;
+    width: 100%;
+    background-color: #222222;
+    height: -moz-fit-content;
+    height: fit-content;
+    color: white;
+  }
+  .allplans .planContainer {
+    padding: 0;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  .allplans .planContainer .planDetails {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    margin-bottom: 0;
+    padding-top: 70px;
+  }
+  .allplans .planContainer .planDetails.newUserPlan {
+    padding-top: 0;
+  }
+  .allplans .planContainer .planDetails .suggestion {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    color: #038d9f;
+  }
+  .allplans .planContainer .planDetails > .planLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 30px 0;
+    padding-bottom: 0;
+  }
+  .allplans .planContainer .planDetails > .planLeft .serviceBgFontMobile {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .allplans .planContainer .planDetails > .planLeft .serviceBgFontMobile img {
+    height: 30px;
+  }
+  .allplans .planContainer .planDetails > .planLeft > .title {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  .allplans .planContainer .planDetails > .planLeft > .title::before {
+    content: "";
+    width: 48px;
+    height: 5px;
+    top: -12px;
+    left: 50%;
+    transform: skew(-40deg) translateX(-50%);
+    position: absolute;
+    background-color: #038d9f;
+  }
+  .allplans .planContainer .planDetails > .planLeft > .desc {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  .allplans .planContainer .planDetails > .planLeft a {
+    text-decoration: none;
+    width: 100%;
+  }
+  .allplans .planContainer .planDetails > .planLeft a > button {
+    background-color: #038d9f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .allplans .planContainer .planDetails > .planLeft a > button .btnTop {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .allplans .planContainer .planDetails > .planLeft a > button .btnTop .btnTitle {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .allplans .planContainer .planDetails > .planLeft a > button .btnTop .price {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  .allplans .planContainer .planDetails > .planLeft a > button .btnTop .price span {
+    font-size: 22px;
+    font-weight: 600;
+    margin-right: 5px;
+  }
+  .allplans .planContainer .planDetails > .planLeft a > button .btnBottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .allplans .planContainer .planDetails > .planLeft a > button .btnBottom .btnDesc {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .allplans .planContainer .planDetails > .planLeft a > button .btnBottom .subPrice {
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 0;
+  }
+  .allplans .planContainer .planDetails > .planLeft .allSlotsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .allplans .planContainer .planDetails > .planLeft .allSlotsContainer .slotSlogan {
+    font-size: 22px;
+    font-weight: 300;
+  }
+  .allplans .planContainer .planDetails > .planLeft .allSlotsContainer .currentSlots {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .allplans .planContainer .planDetails > .planLeft .allSlotsContainer .currentSlots .currentSlot {
+    display: flex;
+    flex-direction: column;
+  }
+  .allplans .planContainer .planDetails > .planLeft .allSlotsContainer .currentSlots .currentSlot .daySlot {
+    display: flex;
+    justify-content: space-between;
+  }
+  .allplans .planContainer .planDetails > .planLeft .allSlotsContainer .currentSlots .currentSlot .daySlot .dates {
+    font-size: 16px;
+  }
+  .allplans .planContainer .planDetails > .planLeft .allSlotsContainer .currentSlots .currentSlot .daySlot .btn {
+    background-color: #038d9f;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 20px;
+    width: 110px;
+    cursor: pointer;
+  }
+  .allplans .planContainer .planDetails > .planLeft .allSlotsContainer .currentSlots .currentSlot .daySlot .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  .allplans .planContainer .planDetails > .planLeft .allSlotsContainer .currentSlots .currentSlot .timeSlots {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .allplans .planContainer .planDetails > .planLeft .allSlotsContainer .currentSlots .currentSlot .timeSlots .timeSlot {
+    display: flex;
+    width: 48%;
+  }
+  .allplans .planContainer .planDetails > .planLeft .allSlotsContainer .currentSlots .currentSlot .timeSlots .timeSlot input {
+    display: none;
+  }
+  .allplans .planContainer .planDetails > .planLeft .allSlotsContainer .currentSlots .currentSlot .timeSlots .timeSlot input[type=radio]:checked + .timeBox {
+    background-color: #038d9f;
+  }
+  .allplans .planContainer .planDetails > .planLeft .allSlotsContainer .currentSlots .currentSlot .timeSlots .timeSlot .timeBox {
+    border: 2px solid #038d9f;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px 5px;
+    color: white;
+    transition: all 0.5s ease;
+  }
+  .allplans .planContainer .planDetails > .planLeft .allSlotsContainer .currentSlots .currentSlot .timeSlots .timeSlot .timeBox p {
+    font-size: 14px;
+  }
+  .allplans .planContainer .planDetails > .planLeft .allSlotsContainer .currentSlots .currentSlot .timeSlots .timeSlot .timeBox:hover {
+    background-color: #038d9f;
+  }
+  .allplans .planContainer .planDetails > .planLeft .allSlotsContainer .currentSlots .currentSlot .timeSlots .timeSlot .timeBox ion-icon {
+    color: white;
+    font-size: 30px;
+    transition: all 0.5s ease;
+  }
+  .allplans .planContainer .planDetails > .planRight {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0;
+  }
+  .allplans .planContainer .planDetails > .planRight img {
+    height: auto;
+    width: 100%;
+  }
+  .allplans .planContainer .serviceBgFont {
+    display: none;
+  }
+  .allplans .planContainer:nth-child(2n) .planDetails {
+    flex-direction: column-reverse;
+  }
+  .allplans .planContainer:nth-child(2n) .planDetails > .planLeft {
+    align-items: center;
+  }
+  .allplans .planContainer:nth-child(2n) .planDetails > .planRight {
+    justify-content: center;
+  }
+  .allplans .searchBar {
+    padding: 0;
+  }
+  .allplans .searchBar .field {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+  }
+  .allplans .searchBar .field ion-icon {
+    font-size: 20px;
+    color: gray;
+    padding: 5px;
+  }
+  .allplans .searchBar .field input {
+    padding: 10px;
+    width: 100%;
+    border: none;
+  }
+  .courseContainer {
+    width: 100%;
+    background-color: #222222;
+    height: -moz-fit-content;
+    height: fit-content;
+    color: white;
+    position: relative;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  .courseContainer .title {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+  }
+  .courseContainer .title::before {
+    content: "";
+    width: 48px;
+    height: 5px;
+    top: -12px;
+    left: 0;
+    transform: skew(-40deg);
+    position: absolute;
+    background-color: #038d9f;
+  }
+  .courseContainer .courseHighlight {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .courseContainer .courseHighlight .subHighlight {
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .courseContainer .courseContent {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+  .courseContainer .courseContent .left {
+    width: 100%;
+  }
+  .courseContainer .courseContent .left .description p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: left;
+  }
+  .courseContainer .courseContent .left .description ul li {
+    margin-left: 20px;
+  }
+  .courseContainer .courseContent .right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .courseContainer .courseContent .right .image {
+    margin-right: 0;
+  }
+  .courseContainer .courseContent .right .image img {
+    height: 250px;
+  }
+  .courseContainer .courseContent .right .priceContainer {
+    border: 2px solid #038d9f;
+    padding: 5px 40px;
+    align-self: center;
+    margin-top: 20px;
+    background-color: #038d9f;
+    border-radius: 5px;
+  }
+  .courseContainer .batchDetails {
+    margin-top: 10px;
+  }
+  .courseContainer .batchDetails .batchTitle {
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .courseContainer .batchDetails .batchContainer {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    row-gap: 20px;
+  }
+  .courseContainer .batchDetails .batchContainer .singleBatch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .courseContainer .batchDetails .batchContainer .singleBatch p {
+    width: 250px;
+    font-size: 14px;
+  }
+  .courseContainer .batchDetails .batchContainer .singleBatch button {
+    width: -moz-fit-content;
+    width: fit-content;
+    background: #038d9f;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #038d9f;
+    transition: all 0.5s ease;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+  .courseContainer .batchDetails .batchContainer .singleBatch button.closed {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .courseContainer .backgroundFont {
+    display: flex;
+    right: 100px;
+    top: 20px;
+    margin: 10px 0;
+  }
+  .courseContainer .backgroundFont img {
+    width: 100%;
+  }
+}
+.faqSection {
+  background-color: #222222;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+.faqSection .title {
+  font-size: 50px;
+}
+.faqSection .questionsContainer {
+  margin-top: 100px;
+  width: 65%;
+}
+.faqSection .questionsContainer details {
+  border-bottom: 1px solid rgb(104, 104, 104);
+}
+.faqSection .questionsContainer details summary {
+  width: 100%;
+  padding: 10px;
+  padding-bottom: 0;
+  position: relative;
+  cursor: pointer;
+  font-weight: 300;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.faqSection .questionsContainer details .que {
+  width: 90%;
+  position: relative;
+  color: rgb(180, 180, 180);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 300;
+  list-style: none;
+}
+.faqSection .questionsContainer details .btn {
+  font-size: 50px;
+  color: #038d9f;
+  padding: 0;
+  transform-origin: center;
+  transition: all 0.5s ease;
+}
+.faqSection .questionsContainer details .ans {
+  padding: 10px;
+  padding-top: 0;
+  font-size: 20px;
+  width: 90%;
+  text-align: left;
+}
+.faqSection .questionsContainer details .ans a {
+  color: white;
+  font-style: italic;
+  padding-left: 10px;
+}
+.faqSection .questionsContainer details[open] summary .btn {
+  transform: rotate(45deg);
+}
+.faqSection .questionsContainer details summary {
+  outline: 0;
+}
+.faqSection .questionsContainer details summary::-webkit-details-marker {
+  display: none;
+}
+.faqSection .faqBgFont {
+  position: absolute;
+  top: 130px;
+  transform: translateX(-50%);
+  left: 50%;
+}
+.faqSection .faqBgFont img {
+  width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  .faqSection {
+    background-color: #222222;
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    position: relative;
+  }
+  .faqSection .title {
+    font-size: 26px;
+    text-align: center;
+    position: relative;
+  }
+  .faqSection .title::before {
+    content: "";
+    width: 48px;
+    height: 5px;
+    top: -12px;
+    left: 50%;
+    transform: skew(-40deg) translateX(-50%);
+    position: absolute;
+    background-color: #038d9f;
+  }
+  .faqSection .questionsContainer {
+    margin-top: 50px;
+    width: 100%;
+  }
+  .faqSection .questionsContainer details {
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(104, 104, 104);
+  }
+  .faqSection .questionsContainer details summary {
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 0;
+    position: relative;
+    cursor: pointer;
+    font-weight: 300;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .faqSection .questionsContainer details .que {
+    width: 90%;
+    position: relative;
+    color: rgb(180, 180, 180);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 300;
+    list-style: none;
+  }
+  .faqSection .questionsContainer details .btn {
+    font-size: 50px;
+    color: #038d9f;
+    padding: 0;
+    transform-origin: center;
+    transition: all 0.5s ease;
+  }
+  .faqSection .questionsContainer details .ans {
+    padding: 10px;
+    padding-top: 5px;
+    font-size: 18px;
+    width: 90%;
+    text-align: left;
+  }
+  .faqSection .questionsContainer details[open] summary .btn {
+    transform: rotate(45deg);
+  }
+  .faqSection .questionsContainer details summary {
+    outline: 0;
+  }
+  .faqSection .questionsContainer details summary::-webkit-details-marker {
+    display: none;
+  }
+  .faqSection .faqBgFont {
+    position: absolute;
+    top: 75px;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+  .faqSection .faqBgFont img {
+    width: auto;
+    height: 40px;
+  }
+}
+.contactForm {
+  background-color: #222222;
+  color: white;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  padding: 50px 100px;
+}
+.contactForm .left {
+  width: 50%;
+}
+.contactForm .left .title {
+  font-size: 50px;
+  width: 70%;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.contactForm .left .desc {
+  font-weight: 0;
+  width: 80%;
+  margin-bottom: 70px;
+  font-weight: 300;
+}
+.contactForm .left .detail {
+  margin-top: 20px;
+  font-weight: 300;
+  font-size: 20px;
+}
+.contactForm .right {
+  width: 50%;
+}
+.contactForm .right form {
+  display: flex;
+  flex-direction: column;
+}
+.contactForm .right form .formField {
+  display: flex;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+.contactForm .right form .formField .subformField {
+  width: 50%;
+}
+.contactForm .right form .formField .subformField .labelSpan {
+  font-size: 14px;
+}
+.contactForm .right form input,
+.contactForm .right form textarea {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  outline: none;
+  overflow: hidden;
+  background-color: #2b2c33;
+  overflow: hidden !important;
+  color: white;
+}
+.contactForm .right form input:-webkit-autofill,
+.contactForm .right form input:-webkit-autofill:hover,
+.contactForm .right form input:-webkit-autofill:focus,
+.contactForm .right form input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #2b2c33 inset !important;
+}
+.contactForm .right form input:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
+}
+.contactForm .right form textarea {
+  resize: vertical;
+  overflow: scroll;
+  height: 100px;
+  min-height: 100px;
+  max-height: 200px;
+}
+.contactForm .right form .mainLabel {
+  margin-bottom: 10px;
+}
+.contactForm .right form .submit {
+  align-self: flex-start;
+  margin-left: 10px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #038d9f;
+  color: #ffffff;
+  border: none;
+  padding: 13px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.contactForm .right form .submit ion-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .contactForm {
+    background-color: #222222;
+    color: white;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .contactForm .left {
+    width: 100%;
+    padding: 20px 0;
+    padding-bottom: 50px;
+  }
+  .contactForm .left .title {
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  .contactForm .left .desc {
+    font-weight: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+  .contactForm .left .detail {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+  }
+  .contactForm .right {
+    width: 100%;
+  }
+  .contactForm .right form {
+    display: flex;
+    flex-direction: column;
+  }
+  .contactForm .right form .formField {
+    display: flex;
+    margin-bottom: 10px;
+    gap: 10px;
+    flex-direction: column;
+  }
+  .contactForm .right form .formField .subformField {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .contactForm .right form .formField .subformField .labelSpan {
+    font-size: 14px;
+  }
+  .contactForm .right form input,
+  .contactForm .right form textarea {
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    outline: none;
+    overflow: hidden;
+    background-color: #2b2c33;
+    overflow: hidden !important;
+    color: white;
+  }
+  .contactForm .right form input:-webkit-autofill,
+  .contactForm .right form input:-webkit-autofill:hover,
+  .contactForm .right form input:-webkit-autofill:focus,
+  .contactForm .right form input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #2b2c33 inset !important;
+  }
+  .contactForm .right form input:-webkit-autofill {
+    -webkit-text-fill-color: white !important;
+  }
+  .contactForm .right form textarea {
+    resize: vertical;
+    overflow: scroll;
+    height: 100px;
+    min-height: 100px;
+    max-height: 200px;
+  }
+  .contactForm .right form .mainLabel {
+    margin-bottom: 10px;
+  }
+  .contactForm .right form .submit {
+    align-self: center;
+    margin-left: 10px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #038d9f;
+    color: #ffffff;
+    border: none;
+    padding: 13px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+            clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  }
+  .contactForm .right form .submit ion-icon {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+}
+.referralPage {
+  position: relative;
+  background-color: #222222;
+}
+.referralPage .referralDetails {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 100px;
+  color: white;
+}
+.referralPage .referralDetails .title {
+  font-size: 40px;
+}
+.referralPage .referralDetails .desc {
+  font-size: 20px;
+  width: 60%;
+  text-align: center;
+  margin-top: 20px;
+}
+.referralPage .referralDetails .desc span {
+  color: #038d9f;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.referralPage .referralDetails .details {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+.referralPage .referralDetails .details .detailBox {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.referralPage .referralDetails .details .detailBox img {
+  height: 120px;
+  width: 120px;
+}
+.referralPage .referralDetails .details .detailBox .detailDesc {
+  font-size: 18px;
+  width: 70%;
+  text-align: center;
+}
+.referralPage .referralDetails form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-top: 30px;
+}
+.referralPage .referralDetails form label {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.referralPage .referralDetails form .formField {
+  border: 2px solid white;
+  border-radius: 5px;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.referralPage .referralDetails form .formField input {
+  width: 90%;
+  border: none;
+  background-color: #222222;
+  padding: 20px 10px;
+  font-size: 20px;
+  color: white;
+  outline: none;
+}
+.referralPage .referralDetails form .formField input::-moz-placeholder {
+  color: gray;
+}
+.referralPage .referralDetails form .formField input::placeholder {
+  color: gray;
+}
+.referralPage .referralDetails form .formField input:-webkit-autofill,
+.referralPage .referralDetails form .formField input:-webkit-autofill:hover,
+.referralPage .referralDetails form .formField input:-webkit-autofill:focus,
+.referralPage .referralDetails form .formField input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 100px #222222 inset !important;
+}
+.referralPage .referralDetails form .formField input:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
+}
+.referralPage .referralDetails form .formField button {
+  width: 10%;
+  border: none;
+  font-size: 20px;
+  background-color: #038d9f;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+.referralPage .referralStatus {
+  background-color: black;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 50px 100px;
+  display: flex;
+  color: white;
+  margin-bottom: 30px;
+}
+.referralPage .referralStatus .left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.referralPage .referralStatus .left form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.referralPage .referralStatus .left form label {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.referralPage .referralStatus .left form .formField {
+  border: 1px solid white;
+  border-radius: 5px;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.referralPage .referralStatus .left form .formField input {
+  width: 80%;
+  border: none;
+  background-color: rgb(12, 12, 12);
+  padding: 16px 10px;
+  font-size: 18px;
+  color: white;
+  outline: none;
+}
+.referralPage .referralStatus .left form .formField input::-moz-placeholder {
+  color: gray;
+}
+.referralPage .referralStatus .left form .formField input::placeholder {
+  color: gray;
+}
+.referralPage .referralStatus .left form .formField input:-webkit-autofill,
+.referralPage .referralStatus .left form .formField input:-webkit-autofill:hover,
+.referralPage .referralStatus .left form .formField input:-webkit-autofill:focus,
+.referralPage .referralStatus .left form .formField input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 100px rgb(12, 12, 12) inset !important;
+}
+.referralPage .referralStatus .left form .formField input:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
+}
+.referralPage .referralStatus .left form .formField button {
+  width: 20%;
+  border: none;
+  background-color: #038d9f;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+}
+.referralPage .referralStatus .left .shortLinks {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.referralPage .referralStatus .left .shortLinks a ion-icon {
+  color: #038d9f;
+  font-size: 30px;
+}
+.referralPage .referralStatus .left .shortLinks a.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.referralPage .referralStatus .right {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+}
+.referralPage .referralStatus .right .item {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.referralPage .referralStatus .right .item .itemValue {
+  font-size: 60px;
+  font-weight: 700;
+}
+.referralPage .referralStatus .right .item .itemTitle {
+  text-align: center;
+  font-size: 16px;
+}
+.referralPage .popUpLayer {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.referralPage .popUpLayer .popUpBox {
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  height: 80vh;
+}
+.referralPage .popUpLayer .popUpBox ion-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.referralPage .popUpLayer .popUpBox .title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.referralPage .popUpLayer .popUpBox .conditions {
+  overflow: auto;
+  padding: 10px;
+  height: 90%;
+}
+.referralPage .popUpLayer .popUpBox .conditions h2 {
+  font-size: 22px;
+}
+.referralPage .popUpLayer .popUpBox .conditions .subdetail {
+  margin-left: 50px;
+  text-align: left;
+}
+.referralPage .popUpLayer .popUpBox .conditions p,
+.referralPage .popUpLayer .popUpBox .conditions li {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .referralPage .referralDetails {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #222222;
+    align-items: center;
+    color: white;
+    padding: 10px;
+  }
+  .referralPage .referralDetails .title {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 500;
+  }
+  .referralPage .referralDetails .desc {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .referralPage .referralDetails .desc span {
+    color: #038d9f;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .referralPage .referralDetails .details {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 20px 0;
+  }
+  .referralPage .referralDetails .details .detailBox {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .referralPage .referralDetails .details .detailBox img {
+    height: 80px;
+    width: 80px;
+  }
+  .referralPage .referralDetails .details .detailBox .detailDesc {
+    font-size: 18px;
+    width: 80%;
+    text-align: center;
+  }
+  .referralPage .referralDetails form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .referralPage .referralDetails form label {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .referralPage .referralDetails form .formField {
+    border: 2px solid white;
+    border-radius: 5px;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+  .referralPage .referralDetails form .formField input {
+    width: 80%;
+    border: none;
+    background-color: rgb(12, 12, 12);
+    padding: 15px 10px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+  }
+  .referralPage .referralDetails form .formField input::-moz-placeholder {
+    color: gray;
+  }
+  .referralPage .referralDetails form .formField input::placeholder {
+    color: gray;
+  }
+  .referralPage .referralDetails form .formField button {
+    width: 20%;
+    border: none;
+    font-size: 16px;
+    background-color: #038d9f;
+    color: white;
+    cursor: pointer;
+    outline: none;
+  }
+  .referralPage .referralStatus {
+    background: linear-gradient(0deg, rgb(0, 0, 0) 85%, rgb(34, 34, 34) 100%);
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 30px 10px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+  .referralPage .referralStatus .left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .referralPage .referralStatus .left form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .referralPage .referralStatus .left form label {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .referralPage .referralStatus .left form .formField {
+    border: 1px solid white;
+    border-radius: 5px;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+  .referralPage .referralStatus .left form .formField input {
+    width: 80%;
+    border: none;
+    background-color: rgb(12, 12, 12);
+    padding: 15px 10px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+  }
+  .referralPage .referralStatus .left form .formField input::-moz-placeholder {
+    color: gray;
+  }
+  .referralPage .referralStatus .left form .formField input::placeholder {
+    color: gray;
+  }
+  .referralPage .referralStatus .left form .formField button {
+    width: 20%;
+    border: none;
+    background-color: #038d9f;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+  }
+  .referralPage .referralStatus .left .shortLinks {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+  }
+  .referralPage .referralStatus .left .shortLinks ion-icon {
+    color: #038d9f;
+    font-size: 30px;
+  }
+  .referralPage .referralStatus .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+  }
+  .referralPage .referralStatus .right .item {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+  .referralPage .referralStatus .right .item .itemValue {
+    font-size: 60px;
+    font-weight: 700;
+  }
+  .referralPage .referralStatus .right .item .itemTitle {
+    text-align: center;
+    font-size: 20px;
+  }
+  .referralPage .popUpLayer {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .referralPage .popUpLayer .popUpBox {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: 80vh;
+  }
+  .referralPage .popUpLayer .popUpBox ion-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .referralPage .popUpLayer .popUpBox .title {
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .referralPage .popUpLayer .popUpBox .conditions {
+    overflow: auto;
+    padding: 5px;
+    height: 90%;
+  }
+  .referralPage .popUpLayer .popUpBox .conditions .subdetail {
+    margin-left: 30px;
+  }
+  .referralPage .popUpLayer .popUpBox .conditions h2 {
+    font-size: 20px;
+  }
+  .referralPage .popUpLayer .popUpBox .conditions p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+}
+.userDetail {
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: calc(100vh - 130px);
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.userDetail .container {
+  display: flex;
+  width: 100%;
+}
+.userDetail .container .userDetailLeft {
+  width: 50%;
+  padding-left: 150px;
+}
+.userDetail .container .userDetailLeft .userDetailTitle {
+  font-size: 30px;
+}
+.userDetail .container .userDetailLeft form {
+  width: 80%;
+  margin-top: 30px;
+}
+.userDetail .container .userDetailLeft form label {
+  margin-left: 10px;
+}
+.userDetail .container .userDetailLeft form .formField {
+  border: 1px solid white;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  background-color: #2b2c33;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 5px 15px;
+  overflow: hidden;
+}
+.userDetail .container .userDetailLeft form .formField.promoField {
+  padding: 0;
+  margin-bottom: 10px;
+}
+.userDetail .container .userDetailLeft form .formField.promoField ion-icon {
+  color: #038d9f;
+  margin: 5px 15px;
+  font-size: 35px;
+  margin-right: 0;
+}
+.userDetail .container .userDetailLeft form .formField ion-icon {
+  color: #038d9f;
+  font-size: 25px;
+}
+.userDetail .container .userDetailLeft form .formField button {
+  border-radius: 0;
+}
+.userDetail .container .userDetailLeft form .formField input {
+  width: 95%;
+  color: white;
+  padding: 8px 10px;
+  background-color: #2b2c33;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.userDetail .container .userDetailLeft form .formField input:-webkit-autofill,
+.userDetail .container .userDetailLeft form .formField input:-webkit-autofill:hover,
+.userDetail .container .userDetailLeft form .formField input:-webkit-autofill:focus,
+.userDetail .container .userDetailLeft form .formField input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #2b2c33 inset !important;
+}
+.userDetail .container .userDetailLeft form .formField input:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
+}
+.userDetail .container .userDetailLeft form .resMsg {
+  margin-bottom: 10px;
+}
+.userDetail .container .userDetailLeft form button {
+  border: none;
+  background-color: #038d9f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 18px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.userDetail .container .userDetailLeft .payBtn {
+  border: none;
+  background-color: #038d9f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 18px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.userDetail .container .userDetailLeft .payBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.userDetail .container .userDetailRight {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userDetail .container .userDetailRight .userDetailCard {
+  overflow: hidden;
+  border-radius: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #038d9f;
+  padding: 15px;
+  justify-content: flex-start;
+  width: 45%;
+}
+.userDetail .container .userDetailRight .userDetailCard .cardTitle {
+  font-size: 20px;
+  font-weight: 300;
+  word-wrap: break-word;
+}
+.userDetail .container .userDetailRight .userDetailCard .detailBox {
+  display: flex;
+  margin-top: 15px;
+  gap: 15px;
+}
+.userDetail .container .userDetailRight .userDetailCard .detailBox .boxLeft {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.userDetail .container .userDetailRight .userDetailCard .detailBox .boxLeft .userImage {
+  border: 2px solid white;
+  overflow: hidden;
+  padding: 5px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userDetail .container .userDetailRight .userDetailCard .detailBox .boxLeft .userImage ion-icon {
+  font-size: 35px;
+}
+.userDetail .container .userDetailRight .userDetailCard .detailBox .boxRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.userDetail .container .userDetailRight .userDetailCard .detailBox .boxRight p {
+  font-size: 14px;
+}
+.userDetail .container .userDetailRight .userDetailCard .detailBox .boxRight .useremail {
+  word-wrap: break-word;
+}
+.userDetail .container .userDetailRight .userDetailCard .detailBox .boxRight .username {
+  font-size: 20px;
+}
+.userDetail .container .userDetailRight .planDetailCard {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: #038d9f;
+  margin-top: 30px;
+  border-radius: 10px;
+  width: 45%;
+}
+.userDetail .container .userDetailRight .planDetailCard .cardTitle {
+  font-size: 20px;
+  font-weight: 300;
+}
+.userDetail .container .userDetailRight .planDetailCard .detailBox {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 10px;
+}
+.userDetail .container .userDetailRight .planDetailCard .detailBox p {
+  font-size: 14px;
+  font-weight: 300;
+}
+.userDetail .container .userDetailRight .planDetailCard .detailBox .dates,
+.userDetail .container .userDetailRight .planDetailCard .detailBox .timeSlot {
+  font-weight: 500;
+}
+.userDetail .container .userDetailRight .planDetailCard .detailBox .dateValue {
+  margin-bottom: 10px;
+}
+.userDetail .container .userDetailRight .planDetailCard .detailBox .trainerDetail {
+  display: flex;
+  margin: 5px 0;
+  align-items: center;
+  gap: 20px;
+}
+.userDetail .container .userDetailRight .planDetailCard .detailBox .trainerDetail .trainerDetailRight p:first-child {
+  font-weight: 500;
+}
+.userDetail .container .userDetailRight .planDetailCard .detailBox .trainerDetail .trainerDetailLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.userDetail .container .userDetailRight .planDetailCard .detailBox .trainerDetail .trainerDetailLeft img {
+  height: 80px;
+  border-radius: 10px;
+}
+.userDetail .container .userDetailRight .planDetailCard .paymentDetailBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px 0;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+.userDetail .container .userDetailRight .planDetailCard .paymentDetailBox .boxRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.userDetail .container .userDetailRight .planDetailCard .paymentDetailBox .boxRight .totalAmount {
+  font-weight: 500;
+  font-size: 18px;
+}
+.userDetail .container .userDetailRight .planDetailCard .paymentDetailBox .boxRight .sessionAmount {
+  text-align: right;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .userDetail {
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    width: 100%;
+    background-color: #222222;
+    color: white;
+    display: flex;
+    padding: 20px 0;
+    align-items: center;
+  }
+  .userDetail .container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+  }
+  .userDetail .container .userDetailLeft {
+    width: 100%;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  .userDetail .container .userDetailLeft .userDetailTitle {
+    font-size: 26px;
+    text-align: center;
+    font-weight: 400;
+  }
+  .userDetail .container .userDetailLeft form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-top: 20px;
+  }
+  .userDetail .container .userDetailLeft form label {
+    margin-left: 0;
+  }
+  .userDetail .container .userDetailLeft form .formField {
+    border: 1px solid white;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: #2b2c33;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 5px 15px;
+  }
+  .userDetail .container .userDetailLeft form .formField.promoField {
+    padding: 0;
+  }
+  .userDetail .container .userDetailLeft form .formField.promoField ion-icon {
+    font-size: 35px;
+  }
+  .userDetail .container .userDetailLeft form .formField ion-icon {
+    color: #038d9f;
+    font-size: 25px;
+  }
+  .userDetail .container .userDetailLeft form .formField input {
+    width: 95%;
+    color: white;
+    padding: 8px 10px;
+    background-color: #2b2c33;
+    border: none;
+    outline: none;
+    font-size: 16px;
+  }
+  .userDetail .container .userDetailLeft form button {
+    align-self: center;
+    border: none;
+    background-color: #038d9f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 18px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .userDetail .container .userDetailLeft form button img {
+    height: 22px;
+    margin-left: 7px;
+  }
+  .userDetail .container .userDetailRight {
+    padding-bottom: 20px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .userDetail .container .userDetailRight .userDetailCard {
+    border-radius: 10px;
+    width: -moz-fit-content;
+    width: fit-content;
+    background-color: #038d9f;
+    padding: 15px;
+    justify-content: flex-start;
+    width: 100%;
+    display: none;
+  }
+  .userDetail .container .userDetailRight .userDetailCard .cardTitle {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  .userDetail .container .userDetailRight .userDetailCard .detailBox {
+    display: flex;
+    margin-top: 15px;
+    gap: 15px;
+  }
+  .userDetail .container .userDetailRight .userDetailCard .detailBox .boxLeft {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .userDetail .container .userDetailRight .userDetailCard .detailBox .boxLeft .userImage {
+    border: 2px solid white;
+    overflow: hidden;
+    padding: 5px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .userDetail .container .userDetailRight .userDetailCard .detailBox .boxLeft .userImage ion-icon {
+    font-size: 35px;
+  }
+  .userDetail .container .userDetailRight .userDetailCard .detailBox .boxRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+  .userDetail .container .userDetailRight .userDetailCard .detailBox .boxRight p {
+    font-size: 14px;
+  }
+  .userDetail .container .userDetailRight .userDetailCard .detailBox .boxRight .username {
+    font-size: 20px;
+  }
+  .userDetail .container .userDetailRight .planDetailCard {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: #038d9f;
+    margin-top: 0;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .userDetail .container .userDetailRight .planDetailCard .cardTitle {
+    font-size: 25px;
+    font-weight: 300;
+  }
+  .userDetail .container .userDetailRight .planDetailCard .detailBox {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 10px;
+  }
+  .userDetail .container .userDetailRight .planDetailCard .detailBox p {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .userDetail .container .userDetailRight .planDetailCard .detailBox .dates,
+  .userDetail .container .userDetailRight .planDetailCard .detailBox .timeSlot {
+    font-weight: 500;
+  }
+  .userDetail .container .userDetailRight .planDetailCard .detailBox .dateValue {
+    margin-bottom: 10px;
+  }
+  .userDetail .container .userDetailRight .planDetailCard .detailBox .trainerDetail {
+    display: flex;
+    margin: 5px 0;
+    align-items: center;
+    gap: 20px;
+  }
+  .userDetail .container .userDetailRight .planDetailCard .detailBox .trainerDetail .trainerDetailRight p:first-child {
+    font-weight: 500;
+  }
+  .userDetail .container .userDetailRight .planDetailCard .paymentDetailBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 0;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+  }
+  .userDetail .container .userDetailRight .planDetailCard .paymentDetailBox .boxRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .userDetail .container .userDetailRight .planDetailCard .paymentDetailBox .boxRight .totalAmount {
+    font-weight: 500;
+    font-size: 18px;
+  }
+  .userDetail .container .userDetailRight .planDetailCard .paymentDetailBox .boxRight .sessionAmount {
+    text-align: right;
+    font-size: 12px;
+  }
+}
+.scrollTop {
+  position: fixed;
+  width: -moz-fit-content;
+  width: fit-content;
+  bottom: 20px;
+  right: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  display: none;
+  color: white;
+  border-radius: 5px;
+  background: #038d9f;
+}
+
+.scrollTop:hover {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+.adminlogin {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  background-color: #222222;
+  /* Firefox */
+}
+.adminlogin input::-webkit-outer-spin-button,
+.adminlogin input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.adminlogin input[type=number] {
+  -moz-appearance: textfield;
+}
+.adminlogin .left {
+  height: 100%;
+  width: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.adminlogin .left a > img {
+  height: 100px;
+  margin-top: 30px;
+  margin-left: 80px;
+}
+.adminlogin .left .adminLogo {
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, -45%);
+  height: 550px;
+  pointer-events: none;
+}
+.adminlogin .right {
+  background-color: #222222;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.adminlogin .right .loginBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 20px;
+  width: 550px;
+  border-radius: 10px;
+  min-height: 200px;
+}
+.adminlogin .right .loginBox .tokenError {
+  color: white;
+  margin: auto;
+  text-align: center;
+  font-weight: 300;
+  font-size: 25px;
+}
+.adminlogin .right .loginBox .title {
+  font-size: 40px;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  margin-bottom: 0;
+}
+.adminlogin .right .loginBox .slogan {
+  color: rgb(208, 208, 208);
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+.adminlogin .right .loginBox .instruction {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 10px;
+  color: white;
+}
+.adminlogin .right .loginBox form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+}
+.adminlogin .right .loginBox form label {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.adminlogin .right .loginBox form label span {
+  color: red;
+  font-size: 16px;
+}
+.adminlogin .right .loginBox form input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+  outline: none;
+  background-color: #2b2c33;
+}
+.adminlogin .right .loginBox form input::-moz-placeholder {
+  color: white;
+}
+.adminlogin .right .loginBox form input::placeholder {
+  color: white;
+}
+.adminlogin .right .loginBox form input:-webkit-autofill,
+.adminlogin .right .loginBox form input:-webkit-autofill:hover,
+.adminlogin .right .loginBox form input:-webkit-autofill:focus,
+.adminlogin .right .loginBox form input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #2b2c33 inset !important;
+}
+.adminlogin .right .loginBox form input:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
+}
+.adminlogin .right .loginBox form .resMsg {
+  margin-top: 0;
+}
+.adminlogin .right .loginBox form button {
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  font-weight: 500;
+  background-color: #038d9f;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.adminlogin .right .loginBox .subLink {
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.adminTop {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(12, 12, 12);
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 7;
+  height: 120px;
+}
+.adminTop .logo {
+  width: 250px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.adminTop .logo img {
+  height: 100px;
+}
+.adminTop .profile {
+  color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.adminTop .profile .userImage {
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  border-radius: 50%;
+  padding: 5px;
+}
+.adminTop .profile .userImage ion-icon {
+  font-size: 25px;
+}
+.adminTop .profile .title {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.mailPopUpLayer {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mailPopUpLayer.addFaculty .popUpBox {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 50%;
+}
+.mailPopUpLayer .popUpBox {
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  width: 70vw;
+  height: 80vh;
+  color: black;
+  overflow: auto;
+}
+.mailPopUpLayer .popUpBox.mailSentPopUpBox {
+  height: 200px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+}
+.mailPopUpLayer .popUpBox ion-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.mailPopUpLayer .popUpBox .popupsubtitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-align: center;
+  margin-top: 10px;
+}
+.mailPopUpLayer .popUpBox form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.mailPopUpLayer .popUpBox form .popuptitle {
+  font-size: 25px;
+  color: black;
+  align-self: center;
+}
+.mailPopUpLayer .popUpBox form label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+.mailPopUpLayer .popUpBox form label span {
+  color: red;
+  font-size: 16px;
+}
+.mailPopUpLayer .popUpBox form textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: black;
+  background: rgba(3, 141, 159, 0.3);
+  border: none;
+  resize: none;
+  height: 120px;
+  outline: none;
+}
+.mailPopUpLayer .popUpBox form textarea.emails {
+  height: 80px;
+}
+.mailPopUpLayer .popUpBox form input,
+.mailPopUpLayer .popUpBox form select {
+  width: 100%;
+  border: 2px solid red;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: black;
+  background: rgba(3, 141, 159, 0.3);
+  border: none;
+  resize: none;
+  outline: none;
+}
+.mailPopUpLayer .popUpBox form input:-webkit-autofill,
+.mailPopUpLayer .popUpBox form input:-webkit-autofill:hover,
+.mailPopUpLayer .popUpBox form input:-webkit-autofill:focus,
+.mailPopUpLayer .popUpBox form input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgba(3, 141, 159, 0.3) inset !important;
+}
+.mailPopUpLayer .popUpBox form input:-webkit-autofill {
+  -webkit-text-fill-color: black !important;
+}
+.mailPopUpLayer .popUpBox form .msg {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.8);
+  margin-top: 20px;
+}
+.mailPopUpLayer .popUpBox form .errMsg {
+  font-size: 12px;
+  color: red;
+  margin-top: 20px;
+  align-self: center;
+}
+.mailPopUpLayer .popUpBox button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #038d9f;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  margin-top: 10px;
+  font-size: 16px;
+  align-self: center;
+}
+
+.adminMainContent {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  /* Firefox */
+}
+.adminMainContent .right {
+  background-color: rgb(50, 50, 50);
+  background-color: #222222;
+  width: 100%;
+  height: 100%;
+  padding-left: 280px;
+  padding-top: 150px;
+  color: white;
+}
+.adminMainContent .adminSide {
+  width: 250px;
+  background-color: #222222;
+  background-color: rgb(23, 23, 23);
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-top: 130px;
+  z-index: 5;
+  color: white;
+}
+.adminMainContent .adminSide .menus {
+  width: 100%;
+  height: calc(100vh - 130px);
+  padding: 10px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.adminMainContent .adminSide .menus .topMenus {
+  height: calc(100vh - 100px - 80px);
+  overflow: auto;
+}
+.adminMainContent .adminSide .menus .topMenus .subMenu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+.adminMainContent .adminSide .menus .topMenus .subMenu .link {
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-content: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  color: rgb(141, 141, 141);
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s linear;
+}
+.adminMainContent .adminSide .menus .topMenus .subMenu .link:hover {
+  color: #038d9f;
+}
+.adminMainContent .adminSide .menus .topMenus .subMenu .link.menuActive {
+  color: #038d9f;
+}
+.adminMainContent .adminSide .menus .topMenus .subMenu .link ion-icon {
+  margin-right: 10px;
+  font-size: 23px;
+}
+.adminMainContent .adminSide .menus .topMenus .subMenu .subLink {
+  text-decoration: none;
+  color: rgb(141, 141, 141);
+  margin-left: 34px;
+  word-wrap: break-word;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+.adminMainContent .adminSide .menus .topMenus .subMenu .subLink:hover {
+  color: #038d9f;
+}
+.adminMainContent .adminSide .menus .topMenus .subMenu .subLink.active {
+  color: #038d9f;
+}
+.adminMainContent .adminSide .menus .bottomMenus {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.adminMainContent .adminSide .menus .bottomMenus .subMenu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-weight: 300;
+}
+.adminMainContent .adminSide .menus .bottomMenus .subMenu .link {
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-content: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  color: rgb(141, 141, 141);
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s linear;
+}
+.adminMainContent .adminSide .menus .bottomMenus .subMenu .link:hover {
+  color: #038d9f;
+}
+.adminMainContent .adminSide .menus .bottomMenus .subMenu .link.menuActive {
+  color: #038d9f;
+}
+.adminMainContent .adminSide .menus .bottomMenus .subMenu .link ion-icon {
+  margin-right: 10px;
+  font-size: 23px;
+}
+.adminMainContent .adminSide .menus .bottomMenus .subMenu .subLink {
+  text-decoration: none;
+  color: white;
+  margin-left: 34px;
+  font-size: 16px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+.adminMainContent .adminSide .menus .bottomMenus .subMenu .subLink:hover {
+  opacity: 1;
+}
+.adminMainContent .adminSide .menus .bottomMenus .subMenu .subLink.active {
+  opacity: 1;
+}
+.adminMainContent button {
+  outline: none;
+}
+.adminMainContent input:-webkit-autofill,
+.adminMainContent input:-webkit-autofill:hover,
+.adminMainContent input:-webkit-autofill:focus,
+.adminMainContent input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 100px #222222 inset !important;
+}
+.adminMainContent input:-webkit-autofill {
+  -webkit-text-fill-color: white !important;
+}
+.adminMainContent input::-webkit-outer-spin-button,
+.adminMainContent input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.adminMainContent input[type=number] {
+  -moz-appearance: textfield;
+}
+.adminMainContent .adminBannerCreate {
+  padding-right: 20px;
+  overflow-y: auto;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+}
+.adminMainContent .adminBannerCreate h2 {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.adminMainContent .adminBannerCreate form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 1000px;
+  margin-left: 0px;
+}
+.adminMainContent .adminBannerCreate form .fieldTitle {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminBannerCreate form .fieldTitle span {
+  color: red;
+}
+.adminMainContent .adminBannerCreate form .formField {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.adminMainContent .adminBannerCreate form .formField .dateBox {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+}
+.adminMainContent .adminBannerCreate form .formField .dateBox .subFormField {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+.adminMainContent .adminBannerCreate form .formField .dateBox .subFormField input[type=text],
+.adminMainContent .adminBannerCreate form .formField .dateBox .subFormField input[type=number] {
+  width: 100%;
+}
+.adminMainContent .adminBannerCreate form .formField .dateBox .subFormField label {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminBannerCreate form .formField .dateBox .subFormField label span {
+  color: red;
+}
+.adminMainContent .adminBannerCreate form .formField textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+  background: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+}
+.adminMainContent .adminBannerCreate form .formField textarea::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.adminMainContent .adminBannerCreate form .formField textarea::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.adminMainContent .adminBannerCreate form .formField input[type=text],
+.adminMainContent .adminBannerCreate form .formField input[type=number] {
+  background: none;
+  outline: none;
+  padding: 13px 10px;
+  border: 1px solid white;
+  width: 40%;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+.adminMainContent .adminBannerCreate form .formField input[type=text]::-moz-placeholder, .adminMainContent .adminBannerCreate form .formField input[type=number]::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminBannerCreate form .formField input[type=text]::placeholder,
+.adminMainContent .adminBannerCreate form .formField input[type=number]::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminBannerCreate form .formField input[type=date] {
+  background: none;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+.adminMainContent .adminBannerCreate form .formField input[type=date]::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminBannerCreate form .formField input[type=date]::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminBannerCreate form .formField ::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.adminMainContent .adminBannerCreate form .formField label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminBannerCreate form .formField .fieldTitle {
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminBannerCreate form .submit {
+  align-self: flex-start;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #038d9f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.adminMainContent .adminBannerCreate form .submit ion-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.adminMainContent .adminBannerHistory {
+  padding-right: 20px;
+  overflow-y: auto;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+}
+.adminMainContent .adminBannerHistory h2 {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.adminMainContent .adminBannerHistory .filterContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.adminMainContent .adminBannerHistory .filterContainer .filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.adminMainContent .adminBannerHistory .filterContainer .filter .filterText {
+  font-size: 18px;
+  margin-right: 5px;
+}
+.adminMainContent .adminBannerHistory .filterContainer .filter .dropDown {
+  width: -moz-max-content;
+  width: max-content;
+  min-width: 200px;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.adminMainContent .adminBannerHistory .filterContainer .filter .dropDown .dropDown-Btn {
+  padding: 8px 13px;
+  background: gray;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  font-weight: 300;
+  font-size: 16px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.adminMainContent .adminBannerHistory .filterContainer .filter .dropDown .dropDown-Btn ion-icon {
+  margin-left: 5px;
+}
+.adminMainContent .adminBannerHistory .filterContainer .filter .dropDown .dropDown-content {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  padding: 3px 0;
+  background: gray;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  font-weight: 300;
+  border-radius: 5px;
+  color: white;
+  z-index: 2;
+  width: 100%;
+  z-index: 4;
+}
+.adminMainContent .adminBannerHistory .filterContainer .filter .dropDown .dropDown-content .dropDown-item {
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.adminMainContent .adminBannerHistory .filterContainer .filter .dropDown .dropDown-content .dropDown-item:hover {
+  background-color: #2b2c33;
+}
+.adminMainContent .adminBannerHistory .filterContainer .exportBtn {
+  background-color: #038d9f;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.adminMainContent .adminBannerHistory .noData {
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+  padding: 20px 0;
+}
+.adminMainContent .adminBannerHistory .tableDiv {
+  margin-top: 20px;
+  max-height: 85%;
+  position: relative;
+  overflow: auto;
+}
+.adminMainContent .adminBannerHistory .tableDiv table {
+  border-collapse: collapse;
+  border-spacing: 0 10px;
+  width: -moz-max-content;
+  width: max-content;
+  min-width: 100%;
+  border: none;
+  overflow-x: auto;
+}
+.adminMainContent .adminBannerHistory .tableDiv th,
+.adminMainContent .adminBannerHistory .tableDiv td {
+  text-align: left;
+  padding: 8px 8px;
+  text-align: center;
+}
+.adminMainContent .adminBannerHistory .tableDiv th {
+  background: #2b2c33;
+  font-weight: 500;
+  font-size: 18px !important;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+.adminMainContent .adminBannerHistory .tableDiv .bannerText {
+  text-align: center;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+.adminMainContent .adminBannerHistory .tableDiv .status {
+  font-weight: 500;
+}
+.adminMainContent .adminBannerHistory .tableDiv .status.running {
+  color: #3ccf4e;
+}
+.adminMainContent .adminBannerHistory .tableDiv .status.completed {
+  color: #e64848;
+}
+.adminMainContent .adminBannerHistory .tableDiv .promocode {
+  font-weight: 500;
+  color: #038d9f;
+}
+.adminMainContent .adminBannerHistory .tableDiv .edit button,
+.adminMainContent .adminBannerHistory .tableDiv .end button {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  background: none;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+}
+.adminMainContent .adminBannerHistory .tableDiv .edit button img,
+.adminMainContent .adminBannerHistory .tableDiv .end button img {
+  height: 100%;
+  width: 100%;
+  -webkit-user-drag: none;
+}
+.adminMainContent .adminBannerHistory .tableDiv .edit button:disabled,
+.adminMainContent .adminBannerHistory .tableDiv .end button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.adminMainContent .adminStudents {
+  padding-right: 20px;
+  overflow-y: auto;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+}
+.adminMainContent .adminStudents h2 {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.adminMainContent .adminStudents .filterContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.adminMainContent .adminStudents .filterContainer .filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.adminMainContent .adminStudents .filterContainer .filter .filterText {
+  font-size: 18px;
+  margin-right: 5px;
+}
+.adminMainContent .adminStudents .filterContainer .filter .dropDown {
+  width: -moz-max-content;
+  width: max-content;
+  min-width: 200px;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.adminMainContent .adminStudents .filterContainer .filter .dropDown .dropDown-Btn {
+  padding: 8px 13px;
+  background: gray;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  font-weight: 300;
+  font-size: 16px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.adminMainContent .adminStudents .filterContainer .filter .dropDown .dropDown-Btn ion-icon {
+  margin-left: 5px;
+}
+.adminMainContent .adminStudents .filterContainer .filter .dropDown .dropDown-content {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  padding: 3px 0;
+  background: gray;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  font-weight: 300;
+  color: white;
+  z-index: 2;
+  width: 100%;
+  z-index: 4;
+}
+.adminMainContent .adminStudents .filterContainer .filter .dropDown .dropDown-content .dropDown-item {
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.adminMainContent .adminStudents .filterContainer .filter .dropDown .dropDown-content .dropDown-item:hover {
+  background-color: #2b2c33;
+}
+.adminMainContent .adminStudents .filterContainer .exportBtn {
+  background-color: #038d9f;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 20px;
+}
+.adminMainContent .adminStudents .tableDiv {
+  margin-top: 20px;
+  max-height: 85%;
+  position: relative;
+  overflow: auto;
+}
+.adminMainContent .adminStudents .tableDiv::-webkit-scrollbar {
+  height: 6px;
+}
+.adminMainContent .adminStudents .tableDiv table {
+  border-collapse: collapse;
+  border-spacing: 0 10px;
+  width: -moz-max-content;
+  width: max-content;
+  min-width: 100%;
+  border: none;
+  overflow-x: auto;
+}
+.adminMainContent .adminStudents .tableDiv .noData {
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+  padding: 20px 0;
+}
+.adminMainContent .adminStudents .tableDiv th,
+.adminMainContent .adminStudents .tableDiv td {
+  text-align: left;
+  padding: 8px 8px;
+  text-align: center;
+}
+.adminMainContent .adminStudents .tableDiv th {
+  background: #2b2c33;
+  font-weight: 500;
+  font-size: 18px !important;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+.adminMainContent .adminStudents .tableDiv .bannerText {
+  text-align: center;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+.adminMainContent .adminStudents .tableDiv .status {
+  font-weight: 500;
+}
+.adminMainContent .adminStudents .tableDiv .status.running {
+  color: #3ccf4e;
+}
+.adminMainContent .adminStudents .tableDiv .status.completed {
+  color: #e64848;
+}
+.adminMainContent .adminStudents .tableDiv .promocode {
+  font-weight: 500;
+  color: #038d9f;
+}
+.adminMainContent .adminStudents .tableDiv .view button {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  background: none;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  padding: 3px;
+  background-color: #038d9f;
+}
+.adminMainContent .adminStudents .tableDiv .view button ion-icon {
+  color: white;
+  font-size: 20px;
+}
+.adminMainContent .adminStudents .tableDiv .edit button,
+.adminMainContent .adminStudents .tableDiv .end button {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  background: none;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+}
+.adminMainContent .adminStudents .tableDiv .edit button img,
+.adminMainContent .adminStudents .tableDiv .end button img {
+  height: 100%;
+  width: 100%;
+  -webkit-user-drag: none;
+}
+.adminMainContent .adminStudents .tableDiv .edit button:disabled,
+.adminMainContent .adminStudents .tableDiv .end button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.adminMainContent .adminSettings {
+  padding-right: 20px;
+  overflow-y: auto;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+}
+.adminMainContent .adminSettings h2 {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.adminMainContent .adminSettings .form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 1000px;
+  margin-left: 0px;
+}
+.adminMainContent .adminSettings .form .fieldTitle {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminSettings .form .fieldTitle span {
+  color: red;
+}
+.adminMainContent .adminSettings .form .formField {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.adminMainContent .adminSettings .form .formField .dateBox {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.adminMainContent .adminSettings .form .formField .dateBox .subFormField {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.adminMainContent .adminSettings .form .formField .dateBox .subFormField input[type=text],
+.adminMainContent .adminSettings .form .formField .dateBox .subFormField input[type=number] {
+  width: 100%;
+}
+.adminMainContent .adminSettings .form .formField .dateBox .subFormField label {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminSettings .form .formField .dateBox .subFormField label span {
+  color: red;
+}
+.adminMainContent .adminSettings .form .formField input[type=text],
+.adminMainContent .adminSettings .form .formField input[type=email] {
+  background: none;
+  outline: none;
+  padding: 13px 10px;
+  border: 1px solid white;
+  width: 45%;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+.adminMainContent .adminSettings .form .formField input[type=text]::-moz-placeholder, .adminMainContent .adminSettings .form .formField input[type=email]::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminSettings .form .formField input[type=text]::placeholder,
+.adminMainContent .adminSettings .form .formField input[type=email]::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminSettings .form .formField ::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.adminMainContent .adminSettings .form .formField label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminSettings .form .formField .fieldTitle {
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminSettings .form .submit {
+  align-self: flex-start;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #038d9f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.adminMainContent .adminSettings .form .submit ion-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.adminMainContent .adminSettings .form2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  width: 1000px;
+  margin-left: 0px;
+}
+.adminMainContent .adminSettings .form2 .fieldTitle {
+  font-weight: 300;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.adminMainContent .adminSettings .form2 .fieldTitle span {
+  color: red;
+}
+.adminMainContent .adminSettings .form2 .formField {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.adminMainContent .adminSettings .form2 .formField .dateBox {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.adminMainContent .adminSettings .form2 .formField .dateBox .subFormField {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.adminMainContent .adminSettings .form2 .formField .dateBox .subFormField input {
+  background: none;
+  outline: none;
+  padding: 13px 10px;
+  border: 1px solid white;
+  width: 100%;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+.adminMainContent .adminSettings .form2 .formField .dateBox .subFormField input::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminSettings .form2 .formField .dateBox .subFormField input::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminSettings .form2 .formField .dateBox .subFormField label {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminSettings .form2 .formField .dateBox .subFormField label span {
+  color: red;
+}
+.adminMainContent .adminSettings .form2 .formField ::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.adminMainContent .adminSettings .form2 .formField label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminSettings .form2 .formField .fieldTitle {
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminSettings .form2 .submit {
+  align-self: flex-start;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #038d9f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.adminMainContent .adminSettings .form2 .submit ion-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.adminMainContent .adminSettings .topFacultyBar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.adminMainContent .adminSettings .topFacultyBar h2 {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 0;
+}
+.adminMainContent .adminSettings .topFacultyBar .addFaculty {
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #038d9f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.adminMainContent .adminSettings .topFacultyBar .addFaculty ion-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.adminMainContent .adminSettings .blockTitle {
+  font-weight: 300;
+  font-size: 25px;
+  margin-top: 30px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminSettings .blockTitle span {
+  color: red;
+}
+.adminMainContent .adminSettings .tableDiv {
+  margin-top: 20px;
+  max-height: 85%;
+  position: relative;
+  overflow: auto;
+}
+.adminMainContent .adminSettings .tableDiv table {
+  border-collapse: collapse;
+  border-spacing: 0 10px;
+  width: -moz-max-content;
+  width: max-content;
+  min-width: 100%;
+  border: none;
+  overflow-x: auto;
+}
+.adminMainContent .adminSettings .tableDiv .noData {
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+  padding: 20px 0;
+}
+.adminMainContent .adminSettings .tableDiv th,
+.adminMainContent .adminSettings .tableDiv td {
+  text-align: left;
+  padding: 8px 8px;
+  text-align: center;
+}
+.adminMainContent .adminSettings .tableDiv th {
+  background: #2b2c33;
+  font-weight: 500;
+  font-size: 18px !important;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+.adminMainContent .adminSettings .tableDiv .status {
+  font-weight: 500;
+}
+.adminMainContent .adminSettings .tableDiv .status.pending {
+  color: #fff89a;
+}
+.adminMainContent .adminSettings .tableDiv .status.approved {
+  color: #3ccf4e;
+}
+.adminMainContent .adminSettings .tableDiv .status.blocked {
+  color: #e64848;
+}
+.adminMainContent .adminSettings .tableDiv .promocode {
+  font-weight: 500;
+  color: #038d9f;
+}
+.adminMainContent .adminSettings .tableDiv button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  width: 100px;
+  margin: auto;
+  border: 2px solid #038d9f;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  background: #038d9f;
+}
+.adminMainContent .adminSettings .tableDiv button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.adminMainContent .adminSingleQuiz {
+  padding-right: 20px;
+  overflow-y: auto;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+}
+.adminMainContent .adminSingleQuiz .titleBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.adminMainContent .adminSingleQuiz .titleBar h2 {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.adminMainContent .adminSingleQuiz .titleBar .exportBtn {
+  background-color: #038d9f;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 20px;
+}
+.adminMainContent .adminSingleQuiz .form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 1000px;
+  margin-left: 0px;
+}
+.adminMainContent .adminSingleQuiz .form .fieldTitle {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminSingleQuiz .form .fieldTitle span {
+  color: red;
+}
+.adminMainContent .adminSingleQuiz .form .formField {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.adminMainContent .adminSingleQuiz .form .formField .dateBox {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+}
+.adminMainContent .adminSingleQuiz .form .formField .dateBox .subFormField {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+.adminMainContent .adminSingleQuiz .form .formField .dateBox .subFormField input[type=text],
+.adminMainContent .adminSingleQuiz .form .formField .dateBox .subFormField input[type=number] {
+  width: 100%;
+}
+.adminMainContent .adminSingleQuiz .form .formField .dateBox .subFormField label {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminSingleQuiz .form .formField .dateBox .subFormField label span {
+  color: red;
+}
+.adminMainContent .adminSingleQuiz .form .formField input[type=text],
+.adminMainContent .adminSingleQuiz .form .formField input[type=email] {
+  background: none;
+  outline: none;
+  padding: 13px 10px;
+  border: 1px solid white;
+  width: 30%;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+.adminMainContent .adminSingleQuiz .form .formField input[type=text]::-moz-placeholder, .adminMainContent .adminSingleQuiz .form .formField input[type=email]::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminSingleQuiz .form .formField input[type=text]::placeholder,
+.adminMainContent .adminSingleQuiz .form .formField input[type=email]::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminSingleQuiz .form .formField ::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.adminMainContent .adminSingleQuiz .form .formField label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminSingleQuiz .form .formField .fieldTitle {
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminSingleQuiz .questionBox {
+  margin-bottom: 30px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.adminMainContent .adminSingleQuiz .questionBox .question {
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.adminMainContent .adminSingleQuiz .questionBox .checks {
+  margin-top: 0;
+  margin-left: 25px;
+  flex-direction: column;
+}
+.adminMainContent .adminSingleQuiz .questionBox .checks > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.adminMainContent .adminSingleQuiz .questionBox .checks > div input {
+  display: none;
+}
+.adminMainContent .adminSingleQuiz .questionBox .checks > div input[type=radio]:checked + .box::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 12px;
+  width: 12px;
+  border-radius: 2px;
+  background-color: #038d9f;
+}
+.adminMainContent .adminSingleQuiz .questionBox .checks > div .box {
+  height: 18px;
+  width: 18px;
+  background-color: #222222;
+  border: 2px solid #038d9f;
+  margin-right: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+.adminMainContent .adminSingleQuiz .questionBox .checks > div label {
+  cursor: pointer;
+}
+.adminMainContent .adminSingleQuiz .questionBox .checks > div .text {
+  font-size: 18px;
+  cursor: pointer;
+}
+.adminMainContent .adminSingleQuiz .questionBox .btn {
+  background-color: #038d9f;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  outline: none;
+  border: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1;
+}
+.adminMainContent .adminSingleQuiz .questionBox .btn ion-icon {
+  margin-left: 5px;
+}
+.adminMainContent .adminGlance {
+  padding-right: 20px;
+  overflow-y: auto;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+}
+.adminMainContent .adminGlance h2 {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.adminMainContent .adminGlance form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 1000px;
+  margin-left: 0px;
+}
+.adminMainContent .adminGlance form .fieldTitle {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminGlance form .fieldTitle span {
+  color: red;
+}
+.adminMainContent .adminGlance form .formField {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.adminMainContent .adminGlance form .formField .dateBox {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+}
+.adminMainContent .adminGlance form .formField .dateBox .subFormField {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+.adminMainContent .adminGlance form .formField .dateBox .subFormField input[type=text],
+.adminMainContent .adminGlance form .formField .dateBox .subFormField input[type=number] {
+  width: 100%;
+}
+.adminMainContent .adminGlance form .formField .dateBox .subFormField label {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminGlance form .formField .dateBox .subFormField label span {
+  color: red;
+}
+.adminMainContent .adminGlance form .formField input[type=text],
+.adminMainContent .adminGlance form .formField input[type=number] {
+  background: none;
+  outline: none;
+  padding: 13px 10px;
+  border: 1px solid white;
+  width: 60%;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+.adminMainContent .adminGlance form .formField input[type=text]::-moz-placeholder, .adminMainContent .adminGlance form .formField input[type=number]::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminGlance form .formField input[type=text]::placeholder,
+.adminMainContent .adminGlance form .formField input[type=number]::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminGlance form .formField input[type=date] {
+  background: none;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+.adminMainContent .adminGlance form .formField input[type=date]::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminGlance form .formField input[type=date]::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminGlance form .formField ::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.adminMainContent .adminGlance form .formField label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminGlance form .formField .fieldTitle {
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminGlance form .submit {
+  align-self: flex-start;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #038d9f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.adminMainContent .adminGlance form .submit ion-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.adminMainContent .adminBannerUpdate {
+  padding-right: 20px;
+  overflow-y: auto;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+}
+.adminMainContent .adminBannerUpdate h2 {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.adminMainContent .adminBannerUpdate form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 1000px;
+  margin-left: 0px;
+}
+.adminMainContent .adminBannerUpdate form .fieldTitle {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminBannerUpdate form .fieldTitle span {
+  color: red;
+}
+.adminMainContent .adminBannerUpdate form .formField {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.adminMainContent .adminBannerUpdate form .formField .dateBox {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+}
+.adminMainContent .adminBannerUpdate form .formField .dateBox .subFormField {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+.adminMainContent .adminBannerUpdate form .formField .dateBox .subFormField input[type=text],
+.adminMainContent .adminBannerUpdate form .formField .dateBox .subFormField input[type=number] {
+  width: 100%;
+}
+.adminMainContent .adminBannerUpdate form .formField .dateBox .subFormField label {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminBannerUpdate form .formField .dateBox .subFormField label span {
+  color: red;
+}
+.adminMainContent .adminBannerUpdate form .formField textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+  background: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+}
+.adminMainContent .adminBannerUpdate form .formField textarea::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.adminMainContent .adminBannerUpdate form .formField textarea::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.adminMainContent .adminBannerUpdate form .formField input[type=text],
+.adminMainContent .adminBannerUpdate form .formField input[type=number] {
+  background: none;
+  outline: none;
+  padding: 13px 10px;
+  border: 1px solid white;
+  width: 40%;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+.adminMainContent .adminBannerUpdate form .formField input[type=text]::-moz-placeholder, .adminMainContent .adminBannerUpdate form .formField input[type=number]::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminBannerUpdate form .formField input[type=text]::placeholder,
+.adminMainContent .adminBannerUpdate form .formField input[type=number]::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminBannerUpdate form .formField input[type=date] {
+  background: none;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+.adminMainContent .adminBannerUpdate form .formField input[type=date]::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminBannerUpdate form .formField input[type=date]::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminBannerUpdate form .formField ::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.adminMainContent .adminBannerUpdate form .formField label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminBannerUpdate form .formField .fieldTitle {
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminBannerUpdate form .submit {
+  align-self: flex-start;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #038d9f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.adminMainContent .adminBannerUpdate form .submit ion-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.adminMainContent .adminSingleCohort {
+  padding-right: 20px;
+  overflow-y: auto;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+}
+.adminMainContent .adminSingleCohort .topCohortBar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.adminMainContent .adminSingleCohort .topCohortBar h2 {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.adminMainContent .adminSingleCohort .topCohortBar .deleteCohort {
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fb2c2c;
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.adminMainContent .adminSingleCohort .topCohortBar .deleteCohort ion-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.adminMainContent .adminSingleCohort .topCohortBar .approveCourse {
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #038d9f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.adminMainContent .adminSingleCohort .topCohortBar .approveCourse ion-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.adminMainContent .adminSingleCohort form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 1000px;
+  margin-left: 0px;
+}
+.adminMainContent .adminSingleCohort form .fieldTitle {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminSingleCohort form .fieldTitle span {
+  color: red;
+}
+.adminMainContent .adminSingleCohort form .formField {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.adminMainContent .adminSingleCohort form .formField .dateBox {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+}
+.adminMainContent .adminSingleCohort form .formField .dateBox .subFormField {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+.adminMainContent .adminSingleCohort form .formField .dateBox .subFormField input[type=text],
+.adminMainContent .adminSingleCohort form .formField .dateBox .subFormField input[type=number] {
+  width: 100%;
+}
+.adminMainContent .adminSingleCohort form .formField .dateBox .subFormField label {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminSingleCohort form .formField .dateBox .subFormField label span {
+  color: red;
+}
+.adminMainContent .adminSingleCohort form .formField textarea {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  background: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+}
+.adminMainContent .adminSingleCohort form .formField textarea#courseTopics {
+  height: 100px;
+}
+.adminMainContent .adminSingleCohort form .formField textarea::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.adminMainContent .adminSingleCohort form .formField textarea::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.adminMainContent .adminSingleCohort form .formField input[type=text],
+.adminMainContent .adminSingleCohort form .formField input[type=number] {
+  background: none;
+  outline: none;
+  padding: 13px 10px;
+  border: 1px solid white;
+  width: 40%;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+.adminMainContent .adminSingleCohort form .formField input[type=text]#courseName,
+.adminMainContent .adminSingleCohort form .formField input[type=number]#courseName {
+  width: 100%;
+}
+.adminMainContent .adminSingleCohort form .formField input[type=text]::-moz-placeholder, .adminMainContent .adminSingleCohort form .formField input[type=number]::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminSingleCohort form .formField input[type=text]::placeholder,
+.adminMainContent .adminSingleCohort form .formField input[type=number]::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminSingleCohort form .formField input[type=date] {
+  background: none;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+.adminMainContent .adminSingleCohort form .formField input[type=date]::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminSingleCohort form .formField input[type=date]::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminSingleCohort form .formField ::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.adminMainContent .adminSingleCohort form .formField label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminSingleCohort form .formField .fieldTitle {
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminSingleCohort form .submit {
+  align-self: flex-start;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #038d9f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.adminMainContent .adminSingleCohort form .submit ion-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.adminMainContent .adminSingleCohort .tableDiv {
+  margin-top: 20px;
+  position: relative;
+}
+.adminMainContent .adminSingleCohort .tableDiv table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  width: 100%;
+  border: none;
+}
+.adminMainContent .adminSingleCohort .tableDiv th,
+.adminMainContent .adminSingleCohort .tableDiv td {
+  text-align: left;
+  padding: 5px 8px;
+  text-align: center;
+}
+.adminMainContent .adminSingleCohort .tableDiv th {
+  background: #2b2c33;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+.adminMainContent .adminSingleCohort .tableDiv .bannerText {
+  text-align: left;
+}
+.adminMainContent .adminSingleCohort .tableDiv .status {
+  font-weight: 500;
+}
+.adminMainContent .adminSingleCohort .tableDiv .status.Enroll {
+  color: #3ccf4e;
+}
+.adminMainContent .adminSingleCohort .tableDiv .status.Closed {
+  color: #e64848;
+}
+.adminMainContent .adminSingleCohort .tableDiv .status.Notify {
+  color: #fff89a;
+}
+.adminMainContent .adminSingleCohort .tableDiv .edit button,
+.adminMainContent .adminSingleCohort .tableDiv .end button {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  margin: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.adminMainContent .adminSingleCohort .tableDiv .edit button img,
+.adminMainContent .adminSingleCohort .tableDiv .end button img {
+  height: 100%;
+  width: 100%;
+  -webkit-user-drag: none;
+}
+.adminMainContent .adminSingleCohort .bottomCohortBar {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.adminMainContent .adminSingleCohort .bottomCohortBar .addSlot {
+  align-self: flex-start;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #038d9f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.adminMainContent .adminSingleCohort .bottomCohortBar .addSlot ion-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.adminMainContent .adminUpdateSlot {
+  padding-right: 20px;
+  overflow-y: auto;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+}
+.adminMainContent .adminUpdateSlot h2 {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.adminMainContent .adminUpdateSlot form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 1000px;
+  margin-left: 0px;
+}
+.adminMainContent .adminUpdateSlot form .dropDown {
+  width: 300px;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.adminMainContent .adminUpdateSlot form .dropDown .dropDown-Btn {
+  padding: 10px 15px;
+  background: #2b2c33;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.adminMainContent .adminUpdateSlot form .dropDown .dropDown-content {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  padding: 10px;
+  background: #2b2c33;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  font-weight: 300;
+  border-radius: 5px;
+  color: white;
+  z-index: 2;
+  width: 100%;
+}
+.adminMainContent .adminUpdateSlot form .dropDown .dropDown-content .dropDown-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.adminMainContent .adminUpdateSlot form .dropDown .dropDown-content .dropDown-item:hover {
+  background-color: #222222;
+}
+.adminMainContent .adminUpdateSlot form .fieldTitle {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminUpdateSlot form .fieldTitle span {
+  color: red;
+}
+.adminMainContent .adminUpdateSlot form .formField {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.adminMainContent .adminUpdateSlot form .formField .dateBox {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+}
+.adminMainContent .adminUpdateSlot form .formField .dateBox .subFormField {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+.adminMainContent .adminUpdateSlot form .formField .dateBox .subFormField input[type=text],
+.adminMainContent .adminUpdateSlot form .formField .dateBox .subFormField input[type=number] {
+  width: 100%;
+}
+.adminMainContent .adminUpdateSlot form .formField .dateBox .subFormField label {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminUpdateSlot form .formField .dateBox .subFormField label span {
+  color: red;
+}
+.adminMainContent .adminUpdateSlot form .formField textarea {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  background: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+}
+.adminMainContent .adminUpdateSlot form .formField textarea#courseTopics {
+  height: 100px;
+}
+.adminMainContent .adminUpdateSlot form .formField textarea::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.adminMainContent .adminUpdateSlot form .formField textarea::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.adminMainContent .adminUpdateSlot form .formField input[type=text],
+.adminMainContent .adminUpdateSlot form .formField input[type=number] {
+  background: none;
+  outline: none;
+  padding: 13px 10px;
+  border: 1px solid white;
+  width: 100%;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+.adminMainContent .adminUpdateSlot form .formField input[type=text]#courseName,
+.adminMainContent .adminUpdateSlot form .formField input[type=number]#courseName {
+  width: 100%;
+}
+.adminMainContent .adminUpdateSlot form .formField input[type=text]::-moz-placeholder, .adminMainContent .adminUpdateSlot form .formField input[type=number]::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminUpdateSlot form .formField input[type=text]::placeholder,
+.adminMainContent .adminUpdateSlot form .formField input[type=number]::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminUpdateSlot form .formField input[type=date],
+.adminMainContent .adminUpdateSlot form .formField input[type=time] {
+  background: none;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+.adminMainContent .adminUpdateSlot form .formField input[type=date]::-moz-placeholder, .adminMainContent .adminUpdateSlot form .formField input[type=time]::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminUpdateSlot form .formField input[type=date]::placeholder,
+.adminMainContent .adminUpdateSlot form .formField input[type=time]::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminUpdateSlot form .formField ::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.adminMainContent .adminUpdateSlot form .formField label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminUpdateSlot form .formField .fieldTitle {
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminUpdateSlot form .submit {
+  align-self: flex-start;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #038d9f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.adminMainContent .adminUpdateSlot form .submit ion-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.adminMainContent .adminCreateSlot {
+  padding-right: 20px;
+  overflow-y: auto;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+}
+.adminMainContent .adminCreateSlot h2 {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.adminMainContent .adminCreateSlot form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 1000px;
+  margin-left: 0px;
+}
+.adminMainContent .adminCreateSlot form .dropDown {
+  width: 300px;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.adminMainContent .adminCreateSlot form .dropDown .dropDown-Btn {
+  padding: 10px 15px;
+  background: #2b2c33;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.adminMainContent .adminCreateSlot form .dropDown .dropDown-content {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  padding: 10px;
+  background: #2b2c33;
+  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  font-weight: 300;
+  border-radius: 5px;
+  color: white;
+  z-index: 2;
+  width: 100%;
+}
+.adminMainContent .adminCreateSlot form .dropDown .dropDown-content .dropDown-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.adminMainContent .adminCreateSlot form .dropDown .dropDown-content .dropDown-item:hover {
+  background-color: #222222;
+}
+.adminMainContent .adminCreateSlot form .fieldTitle {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminCreateSlot form .fieldTitle span {
+  color: red;
+}
+.adminMainContent .adminCreateSlot form .formField {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.adminMainContent .adminCreateSlot form .formField .dateBox {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+}
+.adminMainContent .adminCreateSlot form .formField .dateBox .subFormField {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+.adminMainContent .adminCreateSlot form .formField .dateBox .subFormField input[type=text],
+.adminMainContent .adminCreateSlot form .formField .dateBox .subFormField input[type=number] {
+  width: 100%;
+}
+.adminMainContent .adminCreateSlot form .formField .dateBox .subFormField label {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminCreateSlot form .formField .dateBox .subFormField label span {
+  color: red;
+}
+.adminMainContent .adminCreateSlot form .formField textarea {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  background: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+}
+.adminMainContent .adminCreateSlot form .formField textarea#courseTopics {
+  height: 100px;
+}
+.adminMainContent .adminCreateSlot form .formField textarea::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.adminMainContent .adminCreateSlot form .formField textarea::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.adminMainContent .adminCreateSlot form .formField input[type=text],
+.adminMainContent .adminCreateSlot form .formField input[type=number] {
+  background: none;
+  outline: none;
+  padding: 13px 10px;
+  border: 1px solid white;
+  width: 100%;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+.adminMainContent .adminCreateSlot form .formField input[type=text]#courseName,
+.adminMainContent .adminCreateSlot form .formField input[type=number]#courseName {
+  width: 100%;
+}
+.adminMainContent .adminCreateSlot form .formField input[type=text]::-moz-placeholder, .adminMainContent .adminCreateSlot form .formField input[type=number]::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminCreateSlot form .formField input[type=text]::placeholder,
+.adminMainContent .adminCreateSlot form .formField input[type=number]::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminCreateSlot form .formField input[type=date],
+.adminMainContent .adminCreateSlot form .formField input[type=time] {
+  background: none;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+.adminMainContent .adminCreateSlot form .formField input[type=date]::-moz-placeholder, .adminMainContent .adminCreateSlot form .formField input[type=time]::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminCreateSlot form .formField input[type=date]::placeholder,
+.adminMainContent .adminCreateSlot form .formField input[type=time]::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminCreateSlot form .formField ::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.adminMainContent .adminCreateSlot form .formField label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminCreateSlot form .formField .fieldTitle {
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminCreateSlot form .submit {
+  align-self: flex-start;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #038d9f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.adminMainContent .adminCreateSlot form .submit ion-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.adminMainContent .adminCreateCohort {
+  padding-right: 20px;
+  overflow-y: auto;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+}
+.adminMainContent .adminCreateCohort h2 {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.adminMainContent .adminCreateCohort form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 1000px;
+  margin-left: 0px;
+}
+.adminMainContent .adminCreateCohort form .fieldTitle {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminCreateCohort form .fieldTitle span {
+  color: red;
+}
+.adminMainContent .adminCreateCohort form .formField {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.adminMainContent .adminCreateCohort form .formField .dateBox {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+}
+.adminMainContent .adminCreateCohort form .formField .dateBox .subFormField {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+.adminMainContent .adminCreateCohort form .formField .dateBox .subFormField input[type=text],
+.adminMainContent .adminCreateCohort form .formField .dateBox .subFormField input[type=number] {
+  width: 100%;
+}
+.adminMainContent .adminCreateCohort form .formField .dateBox .subFormField label {
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminCreateCohort form .formField .dateBox .subFormField label span {
+  color: red;
+}
+.adminMainContent .adminCreateCohort form .formField textarea {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  background: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+}
+.adminMainContent .adminCreateCohort form .formField textarea#courseTopics {
+  height: 100px;
+}
+.adminMainContent .adminCreateCohort form .formField textarea::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.adminMainContent .adminCreateCohort form .formField textarea::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.adminMainContent .adminCreateCohort form .formField input[type=text],
+.adminMainContent .adminCreateCohort form .formField input[type=number] {
+  background: none;
+  outline: none;
+  padding: 13px 10px;
+  border: 1px solid white;
+  width: 40%;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+.adminMainContent .adminCreateCohort form .formField input[type=text]#courseName,
+.adminMainContent .adminCreateCohort form .formField input[type=number]#courseName {
+  width: 100%;
+}
+.adminMainContent .adminCreateCohort form .formField input[type=text]::-moz-placeholder, .adminMainContent .adminCreateCohort form .formField input[type=number]::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminCreateCohort form .formField input[type=text]::placeholder,
+.adminMainContent .adminCreateCohort form .formField input[type=number]::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminCreateCohort form .formField input[type=date] {
+  background: none;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+}
+.adminMainContent .adminCreateCohort form .formField input[type=date]::-moz-placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminCreateCohort form .formField input[type=date]::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: 0;
+}
+.adminMainContent .adminCreateCohort form .formField ::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.adminMainContent .adminCreateCohort form .formField label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminCreateCohort form .formField .fieldTitle {
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.adminMainContent .adminCreateCohort form .submit {
+  align-self: flex-start;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #038d9f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.adminMainContent .adminCreateCohort form .submit ion-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.adminMainContent .adminCreateCohort .tableDiv {
+  margin-top: 20px;
+  position: relative;
+}
+.adminMainContent .adminCreateCohort .tableDiv table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  width: 100%;
+  border: none;
+}
+.adminMainContent .adminCreateCohort .tableDiv th,
+.adminMainContent .adminCreateCohort .tableDiv td {
+  text-align: left;
+  padding: 5px 8px;
+  text-align: center;
+}
+.adminMainContent .adminCreateCohort .tableDiv th {
+  background: #2b2c33;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+.adminMainContent .adminCreateCohort .tableDiv .bannerText {
+  text-align: left;
+}
+.adminMainContent .adminCreateCohort .tableDiv .status {
+  color: black;
+  font-weight: 500;
+}
+.adminMainContent .adminCreateCohort .tableDiv .status.Available {
+  background-color: #3ccf4e;
+}
+.adminMainContent .adminCreateCohort .tableDiv .status.Closed {
+  background-color: #e64848;
+}
+.adminMainContent .adminCreateCohort .tableDiv .status.Notify {
+  background-color: #fff89a;
+}
+.adminMainContent .adminCreateCohort .tableDiv .edit button,
+.adminMainContent .adminCreateCohort .tableDiv .end button {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  margin: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.adminMainContent .adminCreateCohort .tableDiv .edit button img,
+.adminMainContent .adminCreateCohort .tableDiv .end button img {
+  height: 100%;
+  width: 100%;
+  -webkit-user-drag: none;
+}
+.adminMainContent .adminCreateCohort .bottomCohortBar {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.adminMainContent .adminCreateCohort .bottomCohortBar .addSlot {
+  border: none;
+  background-color: #038d9f;
+  padding: 10px;
+  width: 100px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.loaderMain {
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden !important;
+  height: 100vh;
+  width: 100%;
+}
+
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #038d9f;
+  margin: -4px 0 0 -4px;
+}
+
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.offerBanner {
+  display: flex;
+  background-color: #2b2c33;
+  color: white;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 100px;
+  position: relative;
+  gap: 30px;
+  display: none;
+}
+.offerBanner.active {
+  display: flex;
+}
+.offerBanner .bannerTitle {
+  font-size: 16px;
+  font-weight: 500;
+}
+.offerBanner .timerBox {
+  display: flex;
+  flex-direction: column;
+}
+.offerBanner .timerBox .timer {
+  font-weight: 500;
+}
+.offerBanner .timerBox .timerTitles {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3px;
+}
+.offerBanner .timerBox .timerTitles h4 {
+  font-size: 12px;
+  font-weight: 300;
+}
+.offerBanner ion-icon {
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .offerBanner {
+    display: flex;
+    flex-direction: column;
+    background-color: #2b2c33;
+    color: white;
+    height: -moz-fit-content;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 50px;
+    position: relative;
+    gap: 10px;
+    display: none;
+  }
+  .offerBanner.active {
+    display: flex;
+  }
+  .offerBanner .bannerTitle {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+  }
+  .offerBanner .timerBox {
+    display: flex;
+    flex-direction: column;
+  }
+  .offerBanner .timerBox .timer {
+    font-weight: 500;
+  }
+  .offerBanner .timerBox .timerTitles {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3px;
+  }
+  .offerBanner .timerBox .timerTitles h4 {
+    font-size: 12px;
+    font-weight: 300;
+  }
+  .offerBanner ion-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transform: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
+.errorComponent {
+  background-color: #222222;
+  height: calc(100vh - 130px);
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+.errorComponent img {
+  height: 300px;
+  margin-top: 20px;
+}
+.errorComponent h1 {
+  margin: 0;
+}
+.errorComponent .desc {
+  width: 40%;
+  text-align: center;
+  margin-top: 10px;
+}
+.errorComponent .learnmore {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #038d9f;
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+          clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.errorComponent .learnmore ion-icon {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.checkoutSuccess {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-color: #222222;
+}
+.checkoutSuccess .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: transparent !important;
+}
+.checkoutSuccess .checkoutSuccessleft,
+.checkoutSuccess .checkoutSuccessright {
+  height: 100%;
+  width: 50%;
+}
+.checkoutSuccess .checkoutSuccessleft {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 100px;
+  padding-top: 180px;
+  color: white;
+  background-color: black;
+}
+.checkoutSuccess .checkoutSuccessleft .logoBox {
+  margin-bottom: 70px;
+}
+.checkoutSuccess .checkoutSuccessleft .logoBox img {
+  height: 80px;
+}
+.checkoutSuccess .checkoutSuccessleft .title {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.checkoutSuccess .checkoutSuccessleft .subtitle {
+  font-size: 18px;
+  width: 70%;
+  font-weight: 300;
+  margin-left: 10px;
+}
+.checkoutSuccess .checkoutSuccessleft ul {
+  font-size: 18px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+.checkoutSuccess .checkoutSuccessleft .detail {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  max-width: 450px;
+  margin-top: 20px;
+}
+.checkoutSuccess .checkoutSuccessleft .detail .detailLeft .icon {
+  display: flex;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(3, 141, 159, 0.3);
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  padding: 10px;
+}
+.checkoutSuccess .checkoutSuccessleft .detail .detailLeft .icon ion-icon {
+  color: #038d9f;
+}
+.checkoutSuccess .checkoutSuccessleft .detail .detailRight {
+  display: flex;
+  flex-direction: column;
+}
+.checkoutSuccess .checkoutSuccessleft .detail .detailRight .key {
+  font-weight: 500;
+  font-size: 16px;
+}
+.checkoutSuccess .checkoutSuccessleft .detail .detailRight .urlBox {
+  display: flex;
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.checkoutSuccess .checkoutSuccessleft .detail .detailRight .urlBox input {
+  border: none;
+  background-color: #2b2c33;
+  color: white;
+  width: 260px;
+  padding: 5px 10px;
+}
+.checkoutSuccess .checkoutSuccessleft .detail .detailRight .urlBox button {
+  width: 40px;
+  border: none;
+  color: #2b2c33;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkoutSuccess .checkoutSuccessleft .successMsg {
+  color: #3ccf4e;
+  margin-top: 5px;
+  font-size: 14px;
+  margin-left: 80px;
+}
+.checkoutSuccess .checkoutSuccessright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkoutSuccess .checkoutSuccessright img {
+  margin-top: 100px;
+  height: 450px;
+}
+
+@media screen and (max-width: 768px) {
+  .checkoutSuccess {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    background-color: #222222;
+    padding-top: 100px;
+  }
+  .checkoutSuccess .navbar {
+    display: none;
+  }
+  .checkoutSuccess .mobileNavbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+  }
+  .checkoutSuccess .checkoutSuccessleft,
+  .checkoutSuccess .checkoutSuccessright {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
+  .checkoutSuccess .checkoutSuccessleft {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px;
+    color: white;
+    background-color: black;
+  }
+  .checkoutSuccess .checkoutSuccessleft .title {
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .checkoutSuccess .checkoutSuccessleft .subtitle {
+    font-size: 18px;
+    width: 100%;
+    font-weight: 300;
+    margin-left: 0;
+  }
+  .checkoutSuccess .checkoutSuccessleft ul {
+    font-size: 18px;
+    margin-left: 20px;
+    margin-bottom: 0px;
+  }
+  .checkoutSuccess .checkoutSuccessleft .detail {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 90vw;
+    overflow: hidden;
+    margin-top: 20px;
+    align-self: center;
+  }
+  .checkoutSuccess .checkoutSuccessleft .detail .detailLeft .icon {
+    display: flex;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(3, 141, 159, 0.4);
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    padding: 10px;
+  }
+  .checkoutSuccess .checkoutSuccessleft .detail .detailLeft .icon ion-icon {
+    color: #038d9f;
+  }
+  .checkoutSuccess .checkoutSuccessleft .detail .detailRight {
+    display: flex;
+    flex-direction: column;
+  }
+  .checkoutSuccess .checkoutSuccessleft .detail .detailRight .key {
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .checkoutSuccess .checkoutSuccessleft .detail .detailRight .urlBox {
+    display: flex;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  .checkoutSuccess .checkoutSuccessleft .detail .detailRight .urlBox input {
+    border: none;
+    background-color: #2b2c33;
+    color: white;
+    width: 220px;
+    padding: 5px 10px;
+  }
+  .checkoutSuccess .checkoutSuccessleft .detail .detailRight .urlBox button {
+    width: 30px;
+    border: none;
+    color: #2b2c33;
+    cursor: pointer;
+  }
+  .checkoutSuccess .checkoutSuccessleft .successMsg {
+    color: #3ccf4e;
+    margin-top: 5px;
+    font-size: 14px;
+    margin-left: 80px;
+  }
+  .checkoutSuccess .checkoutSuccessright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .checkoutSuccess .checkoutSuccessright img {
+    margin-top: 100px;
+    height: 200px;
+  }
+}
+.popUpLayer {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popUpLayer .popUpBox {
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  color: black;
+}
+.popUpLayer .popUpBox ion-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.popUpLayer .popUpBox .popuptitle {
+  font-size: 25px;
+  margin-bottom: 0;
+  color: black;
+}
+.popUpLayer .popUpBox .popupsubtitle {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-align: center;
+  margin-top: 15px;
+}
+.popUpLayer .popUpBox .popupsubtitle.key {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.popUpLayer .popUpBox .popupsubtitle.value {
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #038d9f;
+}
+.popUpLayer .popUpBox .desc {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.popUpLayer .popUpBox .popUpBtns {
+  display: flex;
+  margin-top: 15px;
+  gap: 30px;
+}
+.popUpLayer .popUpBox .popUpBtns button {
+  padding: 10px 0;
+  width: 80px;
+  cursor: pointer;
+  background-color: #038d9f;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  margin-top: 0;
+  font-size: 16px;
+  align-self: center;
+  border: 2px solid #038d9f;
+}
+.popUpLayer .popUpBox .popUpBtns button.no {
+  background-color: white;
+  color: #038d9f;
+}
+.popUpLayer .popUpBox form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 0;
+  width: 350px;
+}
+.popUpLayer .popUpBox form label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+.popUpLayer .popUpBox form label span {
+  color: red;
+  font-size: 16px;
+}
+.popUpLayer .popUpBox form input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: black;
+  background: rgba(3, 141, 159, 0.3);
+  border: none;
+}
+.popUpLayer .popUpBox form input:-webkit-autofill,
+.popUpLayer .popUpBox form input:-webkit-autofill:hover,
+.popUpLayer .popUpBox form input:-webkit-autofill:focus,
+.popUpLayer .popUpBox form input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px rgba(3, 141, 159, 0.3) inset !important;
+}
+.popUpLayer .popUpBox form input:-webkit-autofill {
+  -webkit-text-fill-color: black !important;
+}
+.popUpLayer .popUpBox form .msg {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+.popUpLayer .popUpBox form .errMsg {
+  font-size: 12px;
+  color: red;
+  margin-top: 20px;
+  align-self: center;
+}
+.popUpLayer .popUpBox button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #038d9f;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  margin-top: 0;
+  font-size: 16px;
+  align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  .popUpLayer {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .popUpLayer .popUpBox {
+    background-color: white;
+    padding: 20px;
+    padding-top: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    color: black;
+  }
+  .popUpLayer .popUpBox ion-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .popUpLayer .popUpBox .popuptitle {
+    font-size: 25px;
+    margin-bottom: 0;
+    color: black;
+  }
+  .popUpLayer .popUpBox .popupsubtitle {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .popUpLayer .popUpBox .popupsubtitle.key {
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  .popUpLayer .popUpBox .popupsubtitle.value {
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: #038d9f;
+  }
+  .popUpLayer .popUpBox .desc {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .popUpLayer .popUpBox .popUpBtns {
+    display: flex;
+    margin-top: 15px;
+    gap: 30px;
+  }
+  .popUpLayer .popUpBox .popUpBtns button {
+    padding: 10px 0;
+    width: 80px;
+    cursor: pointer;
+    background-color: #038d9f;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    margin-top: 0;
+    font-size: 16px;
+    align-self: center;
+    border: 2px solid #038d9f;
+  }
+  .popUpLayer .popUpBox .popUpBtns button.no {
+    background-color: white;
+    color: #038d9f;
+  }
+  .popUpLayer .popUpBox form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 0;
+    width: 100%;
+  }
+  .popUpLayer .popUpBox form label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+  .popUpLayer .popUpBox form label span {
+    color: red;
+    font-size: 16px;
+  }
+  .popUpLayer .popUpBox form input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+    background: rgba(3, 141, 159, 0.3);
+    border: none;
+  }
+  .popUpLayer .popUpBox form input:-webkit-autofill,
+  .popUpLayer .popUpBox form input:-webkit-autofill:hover,
+  .popUpLayer .popUpBox form input:-webkit-autofill:focus,
+  .popUpLayer .popUpBox form input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px rgba(3, 141, 159, 0.3) inset !important;
+  }
+  .popUpLayer .popUpBox form input:-webkit-autofill {
+    -webkit-text-fill-color: black !important;
+  }
+  .popUpLayer .popUpBox form .msg {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+  }
+  .popUpLayer .popUpBox form .errMsg {
+    font-size: 12px;
+    color: red;
+    margin-top: 20px;
+    align-self: center;
+  }
+  .popUpLayer .popUpBox button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #038d9f;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    margin-top: 0;
+    font-size: 16px;
+    align-self: center;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: unset;
+}
+
+button,
+.learnmore {
+  outline: none;
+  font-family: "Maven Pro" !important;
+  font-weight: 500 !important;
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  font-family: "Maven Pro", sans-serif !important;
+}
+
+input {
+  outline: none;
+}
+
+p {
+  line-height: normal !important;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #038d9f #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #038d9f;
+  border: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+.resMsg {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #3ccf4e;
+}
+.resMsg.error {
+  color: #e64848;
+}
+
+button:disabled {
+  opacity: 0.7 !important;
+  cursor: not-allowed !important;
+}/*# sourceMappingURL=index.css.map */

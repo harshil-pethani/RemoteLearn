@@ -1,0 +1,203 @@
+@import "./variables";
+
+.homeHeader {
+  background-color: $mainBg;
+  height: calc(100vh - 130px);
+  max-height: calc(0.6 * 100vw);
+  width: 100%;
+  display: flex;
+  position: relative;
+
+  .left {
+    background: white;
+    height: 100%;
+    width: 55%;
+    clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 40% 100%, 0% 100%);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &::after {
+      content: "";
+      font-size: 40px;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: black;
+      opacity: 0.55;
+      z-index: 4;
+    }
+
+    img {
+      height: calc(100vh - 130px);
+      width: 100%;
+      object-position: 0 0;
+      object-fit: cover;
+    }
+  }
+  .right {
+    width: 45%;
+    height: 100%;
+    background-color: $mainBg;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    // border: 2px solid red;
+
+    .slogan {
+      color: $white;
+      margin-right: 100px;
+      margin-left: 50px;
+      // margin-top: 230px;
+      margin-top: 14vh;
+      // border: 2px solid red; 
+      text-align: left;
+      font-size: 28px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .desc {
+      color: white;
+      margin-right: 150px;
+      margin-left: 50px;
+      margin-top: 30px;
+      font-size: 20px;
+      text-align: left;
+      // border: 2px solid red;
+    }
+    .learnmore {
+      align-self: flex-start;
+      margin-left: 50px;
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $orange;
+      color: $white;
+      border: none;
+      padding: 13px 40px;
+      font-size: 16px;
+      cursor: pointer;
+      clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+
+      ion-icon {
+        font-size: 20px;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .backgroundFonts {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    img {
+      width: auto;
+      height: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .homeHeader {
+    background-color: $mainBg;
+    height: auto;
+    max-height: unset;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    // .mobileNavbar {
+    //   // border: 2px solid red;
+    // }
+
+    // .navbar {
+    //   display: none;
+    // }
+
+    .left {
+      // background: $mainBg;
+      height: 100vw;
+      width: 100%;
+      clip-path: none;
+      background-repeat: no-repeat;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      // border: 2px solid red;
+    }
+
+    .right {
+      width: 100%;
+      background-color: $mainBg;
+      height: fit-content;
+      padding: 20px 10px;
+      padding-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-start;
+
+      .slogan {
+        color: $white;
+        padding: 0 5px;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 0;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .desc {
+        // border: 2px solid red;
+        color: white;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 10px;
+        padding: 0 5px;
+        font-size: 17px;
+        text-align: center;
+      }
+      .learnmore {
+        align-self: center;
+        margin-left: 0;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $orange;
+        color: $white;
+        border: none;
+        padding: 13px 40px;
+        font-size: 16px;
+        cursor: pointer;
+        clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+
+        ion-icon {
+          font-size: 20px;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .backgroundFonts {
+      display: none;
+      // opacity: 0;
+      position: relative;
+      bottom: 30px;
+      img {
+        // display: none;
+        width: 100%;
+      }
+    }
+  }
+}

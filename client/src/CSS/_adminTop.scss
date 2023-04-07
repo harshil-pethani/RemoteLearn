@@ -1,0 +1,57 @@
+@import "./variables";
+
+.adminTop {
+  display: flex;
+  justify-content: space-between;
+  // border: 2px solid red;
+  background-color: rgb(12, 12, 12);
+
+  //   padding: 10px 0;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 7;
+  height: 120px;
+
+  .logo {
+    // border: 2px solid red;
+    width: 250px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 100px;
+    }
+  }
+
+  .profile {
+    // border: 2px solid red;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 20px;
+
+    .userImage {
+      border: 2px solid white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+      border-radius: 50%;
+      padding: 5px;
+
+      ion-icon {
+        font-size: 25px;
+      }
+    }
+
+    .title {
+      font-weight: 300;
+      font-size: 20px;
+    }
+  }
+}
