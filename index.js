@@ -26,7 +26,6 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors({
-    credentials: true,
     origin: ['https://clean-fish-pinafore.cyclic.app'],
     methods: ["GET", "PUT", "POST", "DELETE"],
 }))
