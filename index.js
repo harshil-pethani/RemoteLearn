@@ -27,7 +27,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({
     credentials: true,
-    origin: ['https://rich-ruby-jay-tux.cyclic.app', 'http://localhost:3000'],
+    origin: ['https://clean-fish-pinafore.cyclic.app', 'http://localhost:3000'],
     methods: ["GET", "PUT", "POST", "DELETE"],
 }))
 app.use(cookieParser());
