@@ -25,13 +25,11 @@ import { fileURLToPath } from 'url';
 dotenv.config();
 const app = express();
 app.use(express.json());
-// app.use(cors({
-//     credentials: true,
-//     origin: ['https://clean-fish-pinafore.cyclic.app', 'http://localhost:3000'],
-//     methods: ["GET", "PUT", "POST", "DELETE"],
-// }))
-
-app.use(cors());
+app.use(cors({
+    credentials: true,
+    origin: ['https://clean-fish-pinafore.cyclic.app'],
+    methods: ["GET", "PUT", "POST", "DELETE"],
+}))
 app.use(cookieParser());
 const port = process.env.PORT || 5000;
 
